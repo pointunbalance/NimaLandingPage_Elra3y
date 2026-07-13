@@ -266,7 +266,7 @@
             </div>
             <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
                 <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
-                <span id="visitor-count" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
+                <span id="finicount_views" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
             </div>
             <p style="opacity:.6;font-size:.85rem;margin-top:10px">© 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
         </div>
@@ -336,18 +336,7 @@
         document.getElementById("lightbox").addEventListener("click", function(e) {
             if (e.target === this) closeLightbox();
         });
-
-        // Visitor Counter using localStorage
-        (function() {
-            var count = localStorage.getItem("elra3y_visits");
-            if (count === null) {
-                count = 1;
-            } else {
-                count = parseInt(count) + 1;
-            }
-            localStorage.setItem("elra3y_visits", count);
-            document.getElementById("visitor-count").textContent = count;
-        })();
     </script>
+    <script async src="//finicounter.eu.org/finicounter.js"></script>
 </body>
 </html>
