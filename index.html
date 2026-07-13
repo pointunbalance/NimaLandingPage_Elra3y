@@ -264,10 +264,10 @@
                 <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_QuickSpecs.pdf" target="_blank">المواصفات الرسمية</a>
                 <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_Datasheet.pdf" target="_blank">ورقة البيانات</a>
             </div>
-            <div style="margin:20px 0">
-                <img src="https://hitwebcounter.com/counter/counter.php?page=19358279&style=0006&nbdigits=5&nbcolors=1" alt="Visitor Counter" style="border:none">
+            <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
+                <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
+                <span id="visitor-count" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
             </div>
-            <p>جميع المواصفات مأخوذة من فحص مباشر للجهاز</p>
             <p style="opacity:.6;font-size:.85rem;margin-top:10px">© 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
         </div>
     </footer>
@@ -336,6 +336,18 @@
         document.getElementById("lightbox").addEventListener("click", function(e) {
             if (e.target === this) closeLightbox();
         });
+
+        // Visitor Counter using localStorage
+        (function() {
+            var count = localStorage.getItem("elra3y_visits");
+            if (count === null) {
+                count = 1;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            localStorage.setItem("elra3y_visits", count);
+            document.getElementById("visitor-count").textContent = count;
+        })();
     </script>
 </body>
 </html>
