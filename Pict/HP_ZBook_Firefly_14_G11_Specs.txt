@@ -1,0 +1,183 @@
+================================================================================
+                    HP ZBook Firefly 14 inch G11 Mobile Workstation
+                              Full Specifications
+================================================================================
+
+Device Name:        DESKTOP-9OAQ9P1
+Model:              HP ZBook Firefly 14 inch G11 Mobile Workstation PC
+
+================================================================================
+                              CPU - Processor
+================================================================================
+  Name:             Intel Core Ultra 7 165H
+  Codename:         Meteor Lake-H
+  Process:          Intel 4
+  Platform:         BGA2049
+  Stepping:         C0
+  SSPEC:            SRMZ3
+  TDP:              28W
+  MCU:              24
+  Sockets:          1
+  Cores:            16 (P-core: 6, E-core: 8+2)
+  Threads:          22
+  Base Clock:       1.40 GHz
+  Turbo Max:        5000 MHz
+  P-core Cache L1:  6x64 + 6x48
+  E-core Cache L1:  10x128 + 10x64
+  Cache L2:         6x2M + 2x2M+2M
+  Cache L3:         24MB
+  Virtualization:   Enabled
+
+================================================================================
+                              GPU - Graphics Card
+================================================================================
+
+  --- Integrated GPU ---
+  Name:             Intel Meteor Lake - Integrated Graphics
+  Chipset:          Intel Graphics
+  Codename:         Meteor Lake
+  Type:             Integrated
+  Bus:              PCIe v1.1 x1 (2.5 GT/s) @ x1 (2.5 GT/s)
+  Shared Memory:    8.92 GB SDRAM
+  Xe Cores:         8
+  EUs / ALUs:       128 / 1024
+  GPU Clock:        400 MHz (Max: 2300 MHz)
+  Memory Clock:     2793 MHz
+  Bus Width:        64-bit
+  Driver:           Intel(R) Graphics (32.0.101.8331)
+  Driver Date:      11/26/2025
+  DirectX:          12 (FL 12.2)
+
+  --- Discrete GPU ---
+  Name:             NVIDIA RTX A500 Laptop (GA107GLM)
+  Vendor:           Hewlett-Packard
+  Bus:              PCIe v4.0 x16 (16.0 GT/s) @ x4 (16.0 GT/s)
+  Type:             Discrete
+  Video Memory:     4096 MB GDDR6 SDRAM (Hynix)
+  Bus Width:        64-bit
+  GPU Clock:        1335 MHz
+  Memory Clock:     1170 MHz (Effective 12002 MHz)
+  ROPs / TMUs:      32 / 64
+  Unified Shaders:  2048
+  Ray Tracing Cores: 16
+  Tensor Cores:     64
+  ASIC Manufacturer: Samsung
+  Driver:           32.0.15.9649
+  Driver Date:      5/5/2026
+  DirectX:          12 (FL 12.2)
+  Temperature:      53°C
+
+  --- NPU (Neural Processing Unit) ---
+  Name:             Intel NPU (AI Boost)
+  Type:             Integrated
+  Memory:           8.80 GB SDRAM
+  NPU Tiles:        2
+  Clock:            333 MHz (Boost: 700 MHz)
+  Bus:              PCIe v2.0 x0 (DISABLED)
+  Driver:           Intel(R) AI Boost (32.0.100.4514)
+  Driver Date:      12/17/2025
+
+================================================================================
+                              RAM - Memory
+================================================================================
+  Total Size:       16 GB
+  Type:             DDR5 SDRAM
+  Speed:            5600 MT/s
+  Clock:            2793.1 MHz
+  Form Factor:      SODIMM
+  Slots Used:       1 of 2
+  Mode:             Dual-Channel
+  ECC:              No
+  CAS Latency:      46
+  Timing:           46-45-45-90 tRC 135 tRFC 447
+  CR:               2T
+
+  Module Details:
+    Slot:           Controller0ChannelADimm0/Bottom-Slot 1(left)
+    Manufacturer:   Samsung M4
+    Size:           16 GB
+    Type:           DDR5-5600 / PC5-44800 DDR5 SDRAM SO-DIMM
+    Clock:          2800 MHz
+
+================================================================================
+                              SSD - Storage
+================================================================================
+  Model:            SAMSUNG MZVLQ256HBJD-00BH1
+  Capacity:         244,198 MB (256 GB)
+  Interface:        NVMe PCIe x4 8.0 GT/s
+  NVMe Version:     v1.4
+  Drive Letter(s):  C:, D:
+  SCSI Address:     0:0:0:0
+  Serial Number:    S672NS2T521686
+  Firmware:         HPS1NFAV
+  Volatile Write Cache: Present
+  Formatted:        239 GB
+  System Disk:      Yes
+  Page File:        Yes
+  Average Response: 9.2 ms
+
+================================================================================
+                              Wi-Fi - Network
+================================================================================
+  Name:             Intel Wi-Fi 6E AX211 160MHz
+  Vendor:           Microsoft
+  MAC Address:      98-5F-41-E4-C8-6B
+  Max Link Speed:   1 Mbps
+  Current Speed:    1 Mbps
+  Hardware ID:      PCI\VEN_8086&DEV_7E40&SUBSYS_00908...
+  Driver:           Intel(R) Wi-Fi 6E AX211 160MHz
+  Driver Version:   24.10.0.4
+  Driver Date:      11-Nov-2025
+  Location:         PCI\VEN_8086&DEV_7E40&SUBSYS_00908086
+                    PCIROOT(0)#PCI(1403)
+
+================================================================================
+                              Battery
+================================================================================
+  Device Name:      Primary
+  Manufacturer:     Hewlett-Packard
+  Serial Number:    02698 2024/07/27
+  Chemistry:        02698 2024/07/27Hewlett-PackardPrimary
+  Designed Capacity: 56047 mWh
+  Full Charge:      51403 mWh
+  Current Capacity: 48994 mWh (95.3%)
+  Wear Level:       8.3%
+  Cycle Count:      10
+  Power Status:     Discharging
+  Voltage:          12.501 V
+  Discharge Rate:   -31302 mW
+
+================================================================================
+                              Motherboard
+================================================================================
+  Model:            HP 8CD1
+  Chipset:          Intel Meteor Lake-H PCH
+  BIOS Date:        09/24/2025
+  BIOS Version:     W70 Ver. 01.07.02
+  BIOS Mode:        UEFI
+
+================================================================================
+                              Operating System
+================================================================================
+  OS:               Microsoft Windows 11 Professional (x64)
+  Build:            28000.1836
+  UEFI Boot:        Supported
+  Secure Boot:      Enabled
+  TPM:              Supported
+  HVCI:             Supported
+
+================================================================================
+                              Laptop Physical
+================================================================================
+  Brand:            HP
+  Series:           ZBook
+  Model:            Firefly 14 inch G11 Mobile Workstation
+  Color:            Silver
+  Audio:            Poly Studio
+  Security:         HP Wolf Security
+  Stickers:         Intel vPRO
+  Keyboard:         QWERTY with backlight
+  Touchpad:         Large precision touchpad
+  Weight:           ~1.4 kg (estimated)
+
+================================================================================
