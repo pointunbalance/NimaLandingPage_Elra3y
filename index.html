@@ -55,6 +55,24 @@
         .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
         .gallery-item .zoom-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,150,214,.85);color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:0;transition:opacity .3s;pointer-events:none}
         .gallery-item:hover .zoom-icon{opacity:1}
+        /* Company Info */
+        .company-info{padding:80px 0;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:var(--text-light)}
+        .company-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+        .company-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:15px;transition:transform .3s,border-color .3s}
+        .company-card:hover{transform:translateY(-5px);border-color:var(--primary)}
+        .company-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+        .company-card p{line-height:2;color:rgba(255,255,255,.85)}
+        .company-card a{color:var(--primary);text-decoration:none;transition:color .3s}
+        .company-card a:hover{color:#00C6FF;text-decoration:underline}
+        .contact-item{display:flex;align-items:center;gap:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+        .contact-item:last-child{border-bottom:none}
+        .contact-icon{width:45px;height:45px;background:rgba(0,150,214,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+        .contact-details{flex:1}
+        .contact-name{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:2px}
+        .contact-number{font-size:1.1rem;font-weight:600;direction:ltr;text-align:right}
+        .social-links{display:flex;gap:15px;margin-top:20px}
+        .social-link{width:50px;height:50px;background:rgba(0,150,214,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:background .3s,transform .3s;text-decoration:none}
+        .social-link:hover{background:var(--primary);transform:translateY(-3px)}
         .video-section{padding:80px 0;background:var(--bg-dark);color:var(--text-light);text-align:center}
         .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
         .video-wrapper iframe{width:100%;height:450px;border:none}
@@ -74,6 +92,7 @@
                 <li><a href="#specs">المواصفات</a></li>
                 <li><a href="#gallery">المعرض</a></li>
                 <li><a href="#video">الفيديو</a></li>
+                <li><a href="#contact">التواصل</a></li>
             </ul></nav>
         </div>
     </header>
@@ -173,6 +192,49 @@
             <p style="margin-bottom:30px;font-size:1.1rem;opacity:.9">شاهد مراجعة شاملة للابتوب</p>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/mHkxw4p8xEU" title="HP ZBook Firefly 14 G11 Review" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="company-info" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color:#fff">الراعي - بيانات التواصل</h2>
+            <p style="text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem">شريكك الموثوق في خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
+            <div class="company-grid">
+                <div class="company-card">
+                    <h4>&#128205; العنوان</h4>
+                    <p>اسيوط / ديروط / ابو جبل</p>
+                    <p>امام مستشفي الامين - الراعي</p>
+                </div>
+                <div class="company-card">
+                    <h4>&#128222; ارقام الاتصال</h4>
+                    <div class="contact-item">
+                        <div class="contact-icon">&#128100;</div>
+                        <div class="contact-details">
+                            <div class="contact-name">مينا</div>
+                            <div class="contact-number" dir="ltr">01208063327</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">&#128100;</div>
+                        <div class="contact-details">
+                            <div class="contact-name">ابراهيم</div>
+                            <div class="contact-number" dir="ltr">01068857705</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-card">
+                    <h4>&#127760; تابعنا</h4>
+                    <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض والاخبار</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه">&#102;</a>
+                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه">&#128295;</a>
+                    </div>
+                    <div style="margin-top:20px">
+                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s">&#128246; صفحة الشركه</a>
+                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#4267B2;color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s;margin-top:10px">&#128295; صفحة الصيانه</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
