@@ -1,0 +1,6 @@
+Dell Precision 7520
+Intel Core I7-6820HQ
+Ram 16G DDR4
+Ssd NVME 256G
+Intel HD Graphics 530
+Nvidia Quadro M1200 4G GDDR5
