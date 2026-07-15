@@ -148,7 +148,19 @@
         .footer-counter-value{background:var(--primary);color:white;padding:clamp(6px,1.5vw,8px) clamp(15px,3.5vw,20px);border-radius:8px;font-weight:700;font-size:clamp(.9rem,2.2vw,1.1rem);min-width:50px;text-align:center}
         .footer-copyright{opacity:.6;font-size:clamp(.7rem,1.8vw,.85rem);margin-top:10px}
 
-        /* Responsive */
+        /* Desktop breakpoints */
+        @media(min-width:40rem){
+            .features-grid{grid-template-columns:repeat(2,1fr)}
+            .specs-grid{grid-template-columns:repeat(2,1fr)}
+            .gallery-grid{grid-template-columns:repeat(3,1fr)}
+            .company-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media(min-width:60rem){
+            .features-grid{grid-template-columns:repeat(4,1fr)}
+            .company-grid{grid-template-columns:repeat(3,1fr)}
+        }
+
+        /* Mobile menu */
         @media(max-width:768px){
             .header-content{flex-direction:column;gap:15px}
             .nav-toggle{display:block}
@@ -156,10 +168,6 @@
             nav ul{display:none;flex-direction:column;gap:10px;padding:10px 0}
             nav.open ul{display:flex}
             nav a{display:block;text-align:center;padding:10px 16px}
-            .features-grid{grid-template-columns:1fr}
-            .specs-grid{grid-template-columns:1fr}
-            .gallery-grid{grid-template-columns:repeat(2,1fr)}
-            .company-grid{grid-template-columns:1fr}
             .social-link{min-width:44px;min-height:44px}
             .lightbox-nav{width:40px;height:40px;font-size:1.8rem}
         }

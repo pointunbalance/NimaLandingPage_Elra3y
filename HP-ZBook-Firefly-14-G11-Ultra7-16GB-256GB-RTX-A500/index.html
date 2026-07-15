@@ -95,6 +95,20 @@
         .footer-links{display:flex;justify-content:center;gap:clamp(15px,3vw,30px);margin-bottom:25px;flex-wrap:wrap}
         .footer-links a{color:var(--primary);text-decoration:none;font-size:clamp(.8rem,2vw,.95rem);white-space:nowrap}
         .footer-links a:hover{text-decoration:underline}
+
+        /* Desktop breakpoints */
+        @media(min-width:40rem){
+            .features-grid{grid-template-columns:repeat(2,1fr)}
+            .specs-grid{grid-template-columns:repeat(2,1fr)}
+            .gallery-grid{grid-template-columns:repeat(3,1fr)}
+            .company-grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media(min-width:60rem){
+            .features-grid{grid-template-columns:repeat(4,1fr)}
+            .company-grid{grid-template-columns:repeat(3,1fr)}
+        }
+
+        /* Mobile menu */
         @media(max-width:768px){
             .header-content{flex-direction:column;gap:15px}
             .nav-toggle{display:block}
@@ -102,7 +116,6 @@
             nav ul{display:none;flex-direction:column;gap:10px;padding:10px 0}
             nav.open ul{display:flex}
             nav a{display:block;text-align:center;padding:10px 16px}
-            .gallery-grid{grid-template-columns:repeat(2,1fr)}
             .social-link{min-width:44px;min-height:44px}
             .lightbox-nav{width:40px;height:40px;font-size:1.8rem}
         }
