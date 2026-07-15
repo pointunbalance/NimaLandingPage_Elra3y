@@ -30,6 +30,8 @@
 - Download from manufacturer websites or trusted sources
 - Store in `Pict/Dell_Official/` or `Pict/HP_Official/`
 - Name format: `01-Product-Front-View.jpg`, `02-Product-Angle-View.jpg`, etc.
+- **Minimum 5 official images per product** (front, back, side, keyboard, ports)
+- Official images must show different angles of the laptop
 
 ### Store Page Product Images
 - The official image in the store page (laptops.html) MUST show the front face of the laptop
