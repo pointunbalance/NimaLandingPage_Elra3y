@@ -13,7 +13,7 @@
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--primary:#0076CE;--primary-dark:#005AA1;--secondary:#333;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--border:#eee;--grad:linear-gradient(135deg,#0076CE 0%,#00A3E0 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px;--font-display:"Cairo",sans-serif;--font-body:"Noto Kufi Arabic",sans-serif}
         body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
-        h1,h2,h3{font-family:var(--font-display)}
+        h1,h2,h3{font-family:var(--font-display);text-wrap:balance}
         section[id]{scroll-margin-top:80px}
         header{padding:20px 0;position:sticky;top:0;z-index:var(--z-overlay)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -49,7 +49,7 @@
         .spec-value{font-weight:600;color:var(--secondary)}
         .gallery{padding:80px 0;background:var(--text-light)}
         .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer}
+        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer;border:none;background:none;padding:0;font:inherit}
         .gallery-item img{width:100%;height:200px;object-fit:cover;transition:transform .3s}
         .gallery-item:hover img{transform:scale(1.1)}
         .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);color:white;padding:10px;font-size:.9rem}
@@ -104,7 +104,7 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Dell Precision 7520</h1>
+            <h1 translate="no">Dell Precision 7520</h1>
             <p class="hero-subtitle">محطة عمل احترافية - معالج Intel Core i7 وكرت شاشة NVIDIA Quadro M1200</p>
             <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520" class="hero-image" width="500" height="350" fetchpriority="high">
         </div>
@@ -115,22 +115,22 @@
             <h2 class="section-title">مميزات اللابتوب</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">&#9889;</div>
+                    <div class="feature-icon" aria-hidden="true">&#9889;</div>
                     <h3>معالج قوي</h3>
                     <p>Intel Core i7-6820HQ للاداء العالي في جميع المهام</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">&#127918;</div>
+                    <div class="feature-icon" aria-hidden="true">&#127918;</div>
                     <h3>كرت شاشة احترافي</h3>
                     <p>NVIDIA Quadro M1200 4GB للتصميم والتعديلBTTag</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">&#128190;</div>
+                    <div class="feature-icon" aria-hidden="true">&#128190;</div>
                     <h3>تخزين سريع</h3>
                     <p>SSD NVMe 256GB للسرعة الفائقه في التشغيل والاقلاع</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">&#128187;</div>
+                    <div class="feature-icon" aria-hidden="true">&#128187;</div>
                     <h3>ذاكرة عشوائية كبيرة</h3>
                     <p>16GB DDR4 للتعامل مع البرامج الثقيلة</p>
                 </div>
@@ -176,18 +176,18 @@
         <div class="container">
             <h2 class="section-title">معرض الصور</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox(0)"><img src="Pict/1-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - HWiNFO</div></div>
-                <div class="gallery-item" onclick="openLightbox(1)"><img src="Pict/2-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - التفاصيل</div></div>
-                <div class="gallery-item" onclick="openLightbox(2)"><img src="Pict/3-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - المعالج</div></div>
-                <div class="gallery-item" onclick="openLightbox(3)"><img src="Pict/4-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></div>
-                <div class="gallery-item" onclick="openLightbox(4)"><img src="Pict/5-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الظهر</div></div>
-                <div class="gallery-item" onclick="openLightbox(5)"><img src="Pict/6-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب</div></div>
-                <div class="gallery-item" onclick="openLightbox(6)"><img src="Pict/7-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></div>
-                <div class="gallery-item" onclick="openLightbox(7)"><img src="Pict/8-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الغطاء العلوي</div></div>
-                <div class="gallery-item" onclick="openLightbox(8)"><img src="Pict/9-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - من الجنب</div></div>
-                <div class="gallery-item" onclick="openLightbox(9)"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - الوجه الامامي</div></div>
-                <div class="gallery-item" onclick="openLightbox(10)"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - الزاويه</div></div>
-                <div class="gallery-item" onclick="openLightbox(11)"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - من الجنب</div></div>
+                <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة نظام المعلومات"><img src="Pict/1-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - HWiNFO</div></button>
+                <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة التفاصيل"><img src="Pict/2-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - التفاصيل</div></button>
+                <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة المعالج"><img src="Pict/3-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">نظام المعلومات - المعالج</div></button>
+                <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/4-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
+                <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/5-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
+                <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض صورة الجانب"><img src="Pict/6-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
+                <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/7-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
+                <button class="gallery-item" onclick="openLightbox(7)" aria-label="عرض صورة الغطاء"><img src="Pict/8-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الغطاء العلوي</div></button>
+                <button class="gallery-item" onclick="openLightbox(8)" aria-label="عرض صورة من الجنب"><img src="Pict/9-Dell-Precision-7520.jpg" alt="Dell Precision 7520" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - من الجنب</div></button>
+                <button class="gallery-item" onclick="openLightbox(9)" aria-label="عرض الصورة الرسمية - الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - الوجه الامامي</div></button>
+                <button class="gallery-item" onclick="openLightbox(10)" aria-label="عرض الصورة الرسمية - الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - الزاويه</div></button>
+                <button class="gallery-item" onclick="openLightbox(11)" aria-label="عرض الصورة الرسمية - من الجنب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Precision 7520 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">رسمي - من الجنب</div></button>
             </div>
         </div>
     </section>
