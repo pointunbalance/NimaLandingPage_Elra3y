@@ -1,0 +1,6 @@
+Hp Pro book 650 G3
+Intel Core I7-7820HQ
+Ram 8G DDR4
+Gpu Intel HD Graphics 630
+Ssd NVME 256G
+Battery 37620mwh
