@@ -7,7 +7,7 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
+        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px}
         body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light)}
         header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -18,22 +18,27 @@
         nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s}
         nav a:hover{color:var(--primary)}
         nav a.active{color:var(--primary);border-bottom:2px solid var(--primary);padding-bottom:2px}
+        nav a:focus-visible,.product-card:focus-visible,.product-btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+        .product-card:active{transform:translateY(0);transition-duration:.1s}
+        .product-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+        .hero h1,.section-title{overflow-wrap:anywhere;min-width:0}
+        @media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important;animation:none!important}}
         .hero{background:var(--grad-dark);color:var(--text-light);padding:60px 0;text-align:center}
         .hero h1{font-size:2.5rem;margin-bottom:10px}
         .hero p{font-size:1.1rem;opacity:.8}
         .products{padding:60px 0}
         .section-title{text-align:center;font-size:2rem;color:var(--secondary);margin-bottom:10px}
-        .section-subtitle{text-align:center;color:#666;margin-bottom:40px;font-size:1rem}
+        .section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:40px;font-size:1rem}
         .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
 .product-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s;border:2px solid transparent;cursor:pointer;text-decoration:none;color:inherit;display:flex;flex-direction:column}
 .product-card:hover{transform:translateY(-10px);box-shadow:0 20px 60px rgba(0,0,0,.12);border-color:var(--primary)}
-.product-img{width:100%;height:280px;object-fit:cover;background:#f0f0f0}
+.product-img{width:100%;height:280px;object-fit:cover;background:var(--bg-placeholder)}
 .product-info{padding:25px;display:flex;flex-direction:column;flex:1}
 .product-badge{display:inline-block;background:var(--primary);color:white;padding:5px 15px;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:15px;align-self:flex-start}
 .product-name{font-size:1.3rem;font-weight:700;color:var(--secondary);margin-bottom:10px}
-.product-desc{color:#666;font-size:.95rem;margin-bottom:15px;line-height:1.7}
+.product-desc{color:var(--text-muted);font-size:.95rem;margin-bottom:15px;line-height:1.7}
 .product-specs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.spec-tag{background:var(--bg-light);color:#666;padding:6px 12px;border-radius:8px;font-size:.8rem}
+.spec-tag{background:var(--bg-light);color:var(--text-muted);padding:6px 12px;border-radius:8px;font-size:.8rem}
 .product-btn{display:inline-block;background:var(--grad);color:white;padding:12px 30px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .3s;width:100%;text-align:center;margin-top:auto}
         .product-btn:hover{box-shadow:0 5px 20px rgba(0,150,214,.4)}
         .features-bar{background:var(--bg-dark);color:var(--text-light);padding:40px 0}
@@ -114,7 +119,7 @@
                 <a href="Dell-Latitude-E5570-i7-6600U-8GB-256GB/index.html" class="product-card">
                     <img src="Dell-Latitude-E5570-i7-6600U-8GB-256GB/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="product-img">
                     <div class="product-info">
-                        <span class="product-badge" style="background:#0076CE">&#11088; متاح</span>
+                        <span class="product-badge" style="background:var(--primary)">&#11088; متاح</span>
                         <h3 class="product-name">Dell Latitude E5570</h3>
                         <p class="product-desc">لابتوب احترافي للعمل معالج Intel Core i7 وكرت شاشة AMD Radeon</p>
                         <div class="product-specs">
@@ -123,13 +128,13 @@
                             <span class="spec-tag">8GB RAM</span>
                             <span class="spec-tag">256GB NVMe</span>
                         </div>
-                        <span class="product-btn" style="background:linear-gradient(135deg,#0076CE 0%,#00A3E0 100%)">شوف التفاصيل &#8592;</span>
+                        <span class="product-btn" style="background:var(--grad)">شوف التفاصيل &#8592;</span>
                     </div>
                 </a>
                 <a href="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/index.html" class="product-card">
                     <img src="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520" class="product-img">
                     <div class="product-info">
-                        <span class="product-badge" style="background:#0076CE">&#11088; متاح</span>
+                        <span class="product-badge" style="background:var(--primary)">&#11088; متاح</span>
                         <h3 class="product-name">Dell Precision 7520</h3>
                         <p class="product-desc">محطة عمل احترافية للتصميم والتعديل - معالج Intel Core i7 وكرت شاشة NVIDIA Quadro</p>
                         <div class="product-specs">
@@ -138,31 +143,31 @@
                             <span class="spec-tag">16GB RAM</span>
                             <span class="spec-tag">256GB NVMe</span>
                         </div>
-                        <span class="product-btn" style="background:linear-gradient(135deg,#0076CE 0%,#00A3E0 100%)">شوف التفاصيل &#8592;</span>
+                        <span class="product-btn" style="background:var(--grad)">شوف التفاصيل &#8592;</span>
                     </div>
                 </a>
                 <div class="product-card" style="opacity:.6;pointer-events:none">
-                    <div style="width:100%;height:280px;background:linear-gradient(135deg,#e0e0e0,#f5f5f5);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
+                    <div style="width:100%;height:280px;background:var(--bg-placeholder);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
                     <div class="product-info">
-                        <span class="product-badge" style="background:#999">قريباً</span>
+                        <span class="product-badge" style="background:var(--disabled)">قريباً</span>
                         <h3 class="product-name">منتجات جديده قريباً</h3>
                         <p class="product-desc">في انتظاركم منتجات جديده باسعار مميزة - تابعونا</p>
                         <div class="product-specs">
                             <span class="spec-tag">قريباً</span>
                         </div>
-                        <span class="product-btn" style="background:#999;cursor:not-allowed">قريباً</span>
+                        <span class="product-btn" style="background:var(--disabled);cursor:not-allowed">قريباً</span>
                     </div>
                 </div>
                 <div class="product-card" style="opacity:.6;pointer-events:none">
-                    <div style="width:100%;height:280px;background:linear-gradient(135deg,#e0e0e0,#f5f5f5);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
+                    <div style="width:100%;height:280px;background:var(--bg-placeholder);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
                     <div class="product-info">
-                        <span class="product-badge" style="background:#999">قريباً</span>
+                        <span class="product-badge" style="background:var(--disabled)">قريباً</span>
                         <h3 class="product-name">منتجات جديده قريباً</h3>
                         <p class="product-desc">في انتظاركم منتجات جديده باسعار مميزة - تابعونا</p>
                         <div class="product-specs">
                             <span class="spec-tag">قريباً</span>
                         </div>
-                        <span class="product-btn" style="background:#999;cursor:not-allowed">قريباً</span>
+                        <span class="product-btn" style="background:var(--disabled);cursor:not-allowed">قريباً</span>
                     </div>
                 </div>
             </div>
