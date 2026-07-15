@@ -1,0 +1,5 @@
+Dell Latitude E5570
+Intel Core I7-6600U
+Ram 8G
+Ssd NVME 256G
+Amd Radeon R7 M360
