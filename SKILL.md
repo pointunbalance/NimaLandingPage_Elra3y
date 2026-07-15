@@ -49,568 +49,155 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
     <title>Page Title - الراعي</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" as="style">
     <style>
-        :root {
-            --primary: #0096d6;
-            --primary-dark: #0078b3;
-            --secondary: #1a1a2e;
-            --accent: #e94560;
-            --bg-light: #f8f9fa;
-            --bg-dark: #1a1a2e;
-            --text-light: #ffffff;
-            --text-dark: #333333;
-            --text-muted: #666666;
-            --bg-placeholder: #e0e0e0;
-            --disabled: #999999;
-            --facebook: #1877f2;
-            --border: #e0e0e0;
-            --grad: linear-gradient(135deg, #0096d6, #00b4d8);
-            --grad-dark: linear-gradient(135deg, #1a1a2e, #16213e);
-            --z-overlay: 1000;
-            --radius: 8px;
-            --radius-lg: 20px;
-            --font-display: 'Cairo', sans-serif;
-            --font-body: 'Noto Kufi Arabic', sans-serif;
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap");
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --primary:#0096D6;
+            --primary-dark:#0073A7;
+            --secondary:#333;
+            --bg-light:#f8f9fa;
+            --bg-dark:#1a1a2e;
+            --text-light:#fff;
+            --text-dark:#333;
+            --text-muted:#666;
+            --border:#eee;
+            --facebook:#4267B2;
+            --grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);
+            --grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+            --z-overlay:1000;
+            --radius:12px;
+            --radius-lg:20px;
+            --font-display:"Cairo",sans-serif;
+            --font-body:"Noto Kufi Arabic",sans-serif
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: var(--font-body);
-            background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.8;
-            overflow-wrap: anywhere;
-            overscroll-behavior: contain;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        h1,h2,h3{font-family:var(--font-display);text-wrap:balance}
+        section[id]{scroll-margin-top:80px}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
 
         /* Skip Link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary);
-            color: white;
-            padding: 8px 16px;
-            z-index: 1000;
-            text-decoration: none;
-            font-weight: 600;
-            transition: top .3s;
-        }
-        .skip-link:focus { top: 0; }
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
 
         /* Header */
-        header {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: var(--z-overlay);
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-family: var(--font-display);
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary);
-        }
-        .logo span { color: var(--text-light); }
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color .3s;
-            touch-action: manipulation;
-        }
-        nav a:hover { color: var(--primary); }
-        nav a:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-            border-radius: 4px;
-        }
+        header{padding:20px 0;position:sticky;top:0;z-index:var(--z-overlay)}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--primary);background:var(--bg-dark);padding:10px 20px;border-radius:var(--radius)}
+        nav{background:var(--bg-dark);border-radius:50px;padding:8px 30px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+        nav ul{display:flex;list-style:none;gap:20px;align-items:center}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;padding:8px 16px;border-radius:50px;transition:background .3s,color .3s;touch-action:manipulation}
+        nav a:hover{background:rgba(255,255,255,.1);color:var(--primary)}
+        nav a.active{background:var(--primary);color:var(--text-light)}
+        nav a:focus-visible,.social-link:focus-visible,.lightbox-close:focus-visible,.lightbox-nav:focus-visible,.footer-links a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+        nav a:active{transition-duration:.1s}
 
         /* Hero Section */
-        .hero {
-            background: var(--grad-dark);
-            color: var(--text-light);
-            padding: 80px 0;
-            text-align: center;
-        }
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            text-wrap: balance;
-            overflow-wrap: anywhere;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            opacity: .9;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-        .hero-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: var(--radius-lg);
-            box-shadow: 0 20px 60px rgba(0,0,0,.3);
-            margin-top: 30px;
-        }
+        .hero{background:var(--grad);color:var(--text-light);padding:80px 0;text-align:center}
+        .hero h1,.section-title{overflow-wrap:anywhere;min-width:0}
+        .hero h1{font-size:2.8rem;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+        .hero-subtitle{font-size:1.3rem;opacity:.95;max-width:800px;margin:0 auto 30px}
+        .hero-image{max-width:600px;height:auto;border-radius:15px;box-shadow:0 20px 60px rgba(0,0,0,.3);margin-top:40px}
 
         /* Section Title */
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--secondary);
-            margin-bottom: 50px;
-            text-wrap: balance;
-        }
-        .section-title--light { color: var(--text-light); }
+        .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:50px}
+        .section-title--light{color:var(--text-light)}
+        .section-subtitle{text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem}
 
         /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: var(--radius-lg);
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,.08);
-            transition: transform .3s, box-shadow .3s;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,.12);
-        }
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-        .feature-card h3 {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            margin-bottom: 10px;
-        }
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: .95rem;
-        }
+        .features{padding:80px 0;background:var(--text-light)}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+        .feature-card{background:var(--bg-light);padding:30px;border-radius:15px;text-align:center;transition:transform .3s,box-shadow .3s}
+        .feature-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.1)}
+        .feature-icon{font-size:3rem;margin-bottom:20px}
+        .feature-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
+        .feature-card p{color:var(--text-muted);font-size:.95rem}
 
         /* Specs Section */
-        .specs {
-            padding: 80px 0;
-            background: white;
-        }
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        .spec-card {
-            background: var(--bg-light);
-            padding: 25px;
-            border-radius: var(--radius-lg);
-            border-right: 4px solid var(--primary);
-        }
-        .spec-card h4 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        .spec-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border);
-        }
-        .spec-item:last-child { border-bottom: none; }
-        .spec-label { color: var(--text-muted); }
-        .spec-value {
-            font-weight: 600;
-            font-variant-numeric: tabular-nums;
-        }
+        .specs{padding:80px 0;background:var(--bg-light)}
+        .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+        .spec-card{background:var(--text-light);padding:25px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+        .spec-card h4{color:var(--primary);margin-bottom:15px;font-size:1.2rem;border-bottom:2px solid var(--primary);padding-bottom:10px}
+        .spec-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+        .spec-item:last-child{border-bottom:none}
+        .spec-label{color:var(--text-muted)}
+        .spec-value{font-weight:600;color:var(--secondary);font-variant-numeric:tabular-nums}
 
         /* Gallery Section */
-        .gallery {
-            padding: 80px 0;
-            background: var(--bg-light);
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        .gallery-item {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform .3s;
-            aspect-ratio: 16/10;
-        }
-        .gallery-item:hover { transform: scale(1.02); }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transform-origin: center;
-        }
+        .gallery{padding:80px 0;background:var(--text-light)}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer;border:none;background:none;padding:0;font:inherit}
+        .gallery-item img{width:100%;height:200px;object-fit:cover;transition:transform .3s;transform-origin:center}
+        .gallery-item:hover img{transform:scale(1.1)}
+        .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);color:white;padding:10px;font-size:.9rem}
+        .gallery-item .zoom-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,150,214,.85);color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:0;transition:opacity .3s;pointer-events:none}
+        .gallery-item:hover .zoom-icon{opacity:1}
 
         /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.95);
-            z-index: calc(var(--z-overlay) + 100);
-            align-items: center;
-            justify-content: center;
-            overscroll-behavior: contain;
-        }
-        .lightbox.active { display: flex; }
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 85vh;
-            object-fit: contain;
-            border-radius: var(--radius);
-        }
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,.2);
-            color: white;
-            border: none;
-            font-size: 2rem;
-            padding: 15px 20px;
-            cursor: pointer;
-            border-radius: 50%;
-            transition: background .3s;
-        }
-        .lightbox-nav:hover { background: rgba(255,255,255,.3); }
-        .lightbox-nav:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .lightbox-prev { right: 20px; }
-        .lightbox-next { left: 20px; }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(255,255,255,.2);
-            color: white;
-            border: none;
-            font-size: 2rem;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background .3s;
-        }
-        .lightbox-close:hover { background: rgba(255,255,255,.3); }
-        .lightbox-close:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
+        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:var(--z-overlay);justify-content:center;align-items:center;flex-direction:column;overscroll-behavior:contain}
+        .lightbox.active{display:flex}
+        .lightbox-img{max-width:90%;max-height:80vh;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,.5);object-fit:contain;transition:opacity .3s}
+        .lightbox-caption{color:white;margin-top:15px;font-size:1.1rem;text-align:center}
+        .lightbox-close{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.15);color:white;border:none;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:background .3s;z-index:10}
+        .lightbox-close:hover{background:rgba(255,255,255,.3)}
+        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:white;border:none;font-size:2.5rem;width:60px;height:60px;border-radius:50%;cursor:pointer;transition:background .3s}
+        .lightbox-nav:hover{background:rgba(255,255,255,.3)}
+        .lightbox-prev{right:20px}
+        .lightbox-next{left:20px}
+        .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
 
         /* Video Section */
-        .video-section {
-            background: var(--bg-light);
-            padding: 80px 0;
-        }
-        .video-wrapper {
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,.15);
-        }
-        .video-wrapper iframe {
-            display: block;
-        }
+        .video-section{padding:80px 0;background:var(--bg-dark);color:var(--text-light);text-align:center}
+        .video-subtitle{margin-bottom:30px;font-size:1.1rem;opacity:.9}
+        .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+        .video-wrapper iframe{width:100%;height:450px;border:none}
 
         /* Company Info Section */
-        .company-info {
-            padding: 80px 0;
-            background: var(--bg-dark);
-            color: var(--text-light);
-        }
-        .company-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        .company-card {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.1);
-            padding: 30px;
-            border-radius: var(--radius-lg);
-            transition: transform .3s, border-color .3s;
-        }
-        .company-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        .company-card h4 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-        .company-card p {
-            line-height: 2;
-            color: rgba(255,255,255,.85);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background: var(--grad-dark);
-            color: var(--text-light);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-        .contact-card {
-            background: rgba(255,255,255,.05);
-            border: 1px solid rgba(255,255,255,.1);
-            padding: 30px;
-            border-radius: var(--radius-lg);
-            transition: transform .3s, border-color .3s;
-        }
-        .contact-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-        }
-        .contact-card h4 {
-            color: var(--primary);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .contact-card p {
-            line-height: 2;
-            color: rgba(255,255,255,.85);
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,.08);
-        }
-        .contact-item:last-child { border-bottom: none; }
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(0,150,214,.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            flex-shrink: 0;
-        }
-        .contact-details { flex: 1; }
-        .contact-name {
-            font-size: .85rem;
-            color: rgba(255,255,255,.6);
-            margin-bottom: 2px;
-        }
-        .contact-number {
-            font-size: 1.1rem;
-            font-weight: 600;
-            direction: ltr;
-            text-align: right;
-        }
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-link {
-            width: 55px;
-            height: 55px;
-            background: rgba(0,150,214,.2);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            transition: background .3s, transform .3s;
-            text-decoration: none;
-            color: white;
-        }
-        .social-link:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-        }
-        .social-link:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
+        .company-info{padding:80px 0;background:var(--grad-dark);color:var(--text-light)}
+        .company-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+        .company-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:15px;transition:transform .3s,border-color .3s}
+        .company-card:hover{transform:translateY(-5px);border-color:var(--primary)}
+        .company-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+        .company-card p{line-height:2;color:rgba(255,255,255,.85)}
+        .company-card a{color:var(--primary);text-decoration:none;transition:color .3s}
+        .company-card a:hover{color:var(--primary);text-decoration:underline}
+        .contact-item{display:flex;align-items:center;gap:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+        .contact-item:last-child{border-bottom:none}
+        .contact-icon{width:45px;height:45px;background:rgba(0,150,214,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+        .contact-details{flex:1}
+        .contact-name{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:2px}
+        .contact-number{font-size:1.1rem;font-weight:600;direction:ltr;text-align:right}
+        .social-links{display:flex;gap:15px;margin-top:20px}
+        .social-link{width:50px;height:50px;background:rgba(0,150,214,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:background .3s,transform .3s;text-decoration:none}
+        .social-link:hover{background:var(--primary);transform:translateY(-3px)}
 
         /* CTA Buttons */
-        .cta-btn-row {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .cta-btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            border-radius: 10px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background .3s;
-        }
-        .cta-btn-primary:hover { background: var(--primary-dark); }
-        .cta-btn-facebook {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--facebook);
-            color: var(--text-light);
-            padding: 12px 25px;
-            border-radius: var(--radius);
-            font-weight: 600;
-            text-decoration: none;
-            transition: background .3s;
-        }
-        .cta-btn-facebook:hover { opacity: .9; }
+        .cta-btn-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+        .cta-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s}
+        .cta-btn-primary:hover{background:var(--primary-dark)}
+        .cta-btn-facebook{display:inline-flex;align-items:center;gap:8px;background:var(--facebook);color:var(--text-light);padding:12px 25px;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:background .3s}
 
         /* Footer */
-        footer {
-            background: var(--grad-dark);
-            color: var(--text-light);
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-brand {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            font-weight: 900;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        .footer-brand span { color: var(--text-light); }
-        .footer-desc {
-            opacity: .7;
-            max-width: 300px;
-            line-height: 1.8;
-        }
-        .footer-nav {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .footer-nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            opacity: .8;
-            transition: opacity .3s;
-        }
-        .footer-nav a:hover { opacity: 1; }
-        .footer-nav a:focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,.1);
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .footer-counter {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .footer-counter-label {
-            opacity: .6;
-            font-size: .85rem;
-        }
-        .footer-counter-value {
-            background: var(--primary);
-            color: white;
-            padding: 6px 16px;
-            border-radius: var(--radius);
-            font-weight: 700;
-            font-size: .9rem;
-            min-width: 50px;
-            text-align: center;
-        }
-        .footer-copyright {
-            opacity: .5;
-            font-size: .8rem;
-        }
+        footer{background:var(--bg-dark);color:var(--text-light);padding:40px 0 20px;text-align:center}
+        .footer-links{display:flex;justify-content:center;gap:30px;margin-bottom:30px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none}
+        .footer-links a:hover{text-decoration:underline}
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6)}
+        .footer-counter-value{background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:.85rem;margin-top:10px}
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .header-content { flex-direction: column; gap: 20px; }
-            nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
-            .footer-top { flex-direction: column; text-align: center; }
-            .footer-nav { justify-content: center; }
-            .footer-bottom { flex-direction: column; text-align: center; }
+        @media(max-width:768px){
+            .hero h1{font-size:2rem}
+            .header-content{flex-direction:column;gap:20px}
+            nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
+            .hero-image{max-width:100%}
         }
 
         /* Accessibility */
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        /* Focus Visible */
-        :focus-visible {
-            outline: 2px solid var(--primary);
-            outline-offset: 4px;
-        }
+        @media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important;animation:none!important}}
     </style>
 </head>
 <body>
@@ -618,17 +205,14 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
 
     <header>
         <div class="container header-content">
-            <div class="logo">ال<span>راعي</span></div>
-            <nav aria-label="القائمة الرئيسية">
-                <ul>
-                    <li><a href="../index.html">الرئيسية</a></li>
-                    <li><a href="../laptops.html">اللابتوبات</a></li>
-                    <li><a href="#features">المواصفات</a></li>
-                    <li><a href="#specs">التفاصيل</a></li>
-                    <li><a href="#gallery">المعرض</a></li>
-                    <li><a href="#contact">التواصل</a></li>
-                </ul>
-            </nav>
+            <div class="logo">Brand Name</div>
+            <nav aria-label="القائمة الرئيسية"><ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../laptops.html" class="active">اللابتوبات</a></li>
+                <li><a href="#specs">المواصفات</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul></nav>
         </div>
     </header>
 
@@ -636,19 +220,19 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <h1>Product Name</h1>
-                <p>Product Subtitle</p>
-                <img src="Pict/Brand_Official/01-Product-Front-View.jpg" alt="Product Name" class="hero-img" width="800" height="500" loading="eager" fetchpriority="high">
+                <h1 translate="no">Product Name</h1>
+                <p class="hero-subtitle">Product Subtitle</p>
+                <img src="Pict/Brand_Official/01-Product-Front-View.jpg" alt="Product Name" class="hero-image" width="600" height="400" fetchpriority="high">
             </div>
         </section>
 
         <!-- Features Section -->
         <section class="features" id="features">
             <div class="container">
-                <h2 class="section-title">مميزات المنتج</h2>
+                <h2 class="section-title">مميزات الحاسوب</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
                         <h3>المعالج</h3>
                         <p>CPU Details</p>
                     </div>
@@ -663,7 +247,7 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
                         <p>Storage Details</p>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
                         <h3>الذاكره</h3>
                         <p>RAM Details</p>
                     </div>
@@ -674,8 +258,9 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
         <!-- Specs Section -->
         <section class="specs" id="specs">
             <div class="container">
-                <h2 class="section-title">المواصفات الفنيه</h2>
+                <h2 class="section-title">المواصفات الفنية</h2>
                 <div class="specs-grid">
+                    <!-- CPU Spec Card -->
                     <div class="spec-card">
                         <h4>&#128187; المعالج</h4>
                         <div class="spec-item">
@@ -683,25 +268,44 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
                             <span class="spec-value">CPU Model</span>
                         </div>
                     </div>
+                    <!-- GPU Spec Card (one per GPU) -->
                     <div class="spec-card">
-                        <h4>&#127918; كرت الشاشه</h4>
+                        <h4>&#127918; كرت الشاشه المخصص</h4>
                         <div class="spec-item">
                             <span class="spec-label">الموديل</span>
                             <span class="spec-value">GPU Model</span>
                         </div>
                     </div>
+                    <!-- Integrated GPU (if exists) -->
+                    <div class="spec-card">
+                        <h4>&#127918; كرت الشاشه المدمج</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">الموديل</span>
+                            <span class="spec-value">Intel UHD Graphics</span>
+                        </div>
+                    </div>
+                    <!-- Storage -->
                     <div class="spec-card">
                         <h4>&#128190; التخزين</h4>
                         <div class="spec-item">
                             <span class="spec-label">النوع</span>
-                            <span class="spec-value">Storage Type</span>
+                            <span class="spec-value">SSD NVMe</span>
                         </div>
                     </div>
+                    <!-- RAM -->
                     <div class="spec-card">
                         <h4>&#9889; الذاكره</h4>
                         <div class="spec-item">
                             <span class="spec-label">السعة</span>
-                            <span class="spec-value">RAM Size</span>
+                            <span class="spec-value">16GB DDR5</span>
+                        </div>
+                    </div>
+                    <!-- Optional: NPU/AI Card -->
+                    <div class="spec-card">
+                        <h4>&#129302; وحدة الذكاء الاصطناعي</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">النوع</span>
+                            <span class="spec-value">Intel AI Boost NPU</span>
                         </div>
                     </div>
                 </div>
@@ -714,25 +318,26 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
                 <h2 class="section-title">معرض الصور</h2>
                 <div class="gallery-grid">
                     <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض الصورة 1">
-                        <img src="Pict/1-Brand-Model.jpg" alt="Description" width="400" height="250" loading="lazy">
+                        <img src="Pict/1-Brand-Model.jpg" alt="Description" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- Video Section -->
-        <section class="video-section">
+        <section class="video-section" id="video">
             <div class="container">
                 <h2 class="section-title section-title--light">فيديو التعريف</h2>
-                <p class="video-subtitle" style="text-align:center;opacity:.9;max-width:700px;margin:0 auto 30px">شاهد مراجعة شاملة للابتوب</p>
+                <p class="video-subtitle">شاهد مراجعة شاملة للابتوب</p>
                 <div class="video-wrapper">
-                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/VIDEO_ID" title="Video Title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Video Title" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
 
         <!-- Company Info Section -->
-        <section class="company-info">
+        <section class="company-info" id="contact">
             <div class="container">
                 <h2 class="section-title section-title--light">الراعي - بيانات التواصل</h2>
                 <div class="company-grid">
@@ -759,34 +364,27 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
 
     <footer>
         <div class="container">
-            <div class="footer-top">
-                <div>
-                    <div class="footer-brand">ال<span>راعي</span></div>
-                    <p class="footer-desc">افضل خدمات الكمبيوتر واللابتوب وكاميرات المراقبه في منطقه اسيوط - ديروط</p>
-                </div>
-                <div class="footer-nav">
-                    <a href="../index.html#services">خدماتنا</a>
-                    <a href="../index.html#about">عن الشركه</a>
-                    <a href="../laptops.html">اللابتوبات</a>
-                    <a href="../index.html#contact">التواصل</a>
-                </div>
+            <div class="footer-links">
+                <a href="../index.html">الرئيسية</a>
+                <a href="../laptops.html">اللابتوبات</a>
+                <a href="../index.html#contact">التواصل</a>
             </div>
-            <div class="footer-bottom">
-                <div class="footer-counter">
-                    <span class="footer-counter-label">عدد الزوار:</span>
-                    <span id="finicount_views" class="footer-counter-value">...</span>
-                </div>
-                <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
             </div>
+            <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
         </div>
     </footer>
 
     <!-- Lightbox Modal -->
-    <div class="lightbox" id="lightbox" role="dialog" aria-label="عرض الصور" aria-modal="true">
+    <div class="lightbox" id="lightbox">
         <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق">&times;</button>
         <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق">&#10095;</button>
-        <img src="" alt="Gallery Image" id="lightbox-img">
+        <img src="" alt="Gallery Image" class="lightbox-img" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
         <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي">&#10094;</button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
 
     <script async src="https://finicounter.eu.org/finicounter.js"></script>
@@ -794,12 +392,21 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
         // Lightbox Functions
         let currentImageIndex = 0;
         const galleryImages = [];
+        const galleryCaptions = [];
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxCounter = document.getElementById('lightbox-counter');
 
         function openLightbox(index) {
             currentImageIndex = index;
-            lightboxImg.src = galleryImages[index];
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+                lightboxImg.src = galleryImages[index];
+                lightboxCaption.textContent = galleryCaptions[index] || '';
+                lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+                lightboxImg.style.opacity = 1;
+            }, 100);
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
             document.getElementById('lightbox-close').focus();
@@ -812,7 +419,13 @@ Brand-Model-CPU-RAM-Storage-GPU/Pict/Brand_Official/
 
         function navigateLightbox(direction) {
             currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
-            lightboxImg.src = galleryImages[currentImageIndex];
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+                lightboxImg.src = galleryImages[currentImageIndex];
+                lightboxCaption.textContent = galleryCaptions[currentImageIndex] || '';
+                lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+                lightboxImg.style.opacity = 1;
+            }, 100);
         }
 
         // Keyboard Navigation
