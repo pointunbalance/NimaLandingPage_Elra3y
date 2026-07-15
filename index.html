@@ -3,67 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HP ZBook Firefly 14 G11 - لابتوب احترافي</title>
+    <title>الراعي - خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary:#0096D6;--secondary:#333;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%)}
+        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
         body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light)}
         header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
         .header-content{display:flex;justify-content:space-between;align-items:center}
-        .logo{font-size:1.8rem;font-weight:700;color:var(--primary)}
+        .logo{font-size:1.8rem;font-weight:800;color:var(--primary)}
+        .logo span{color:var(--text-light)}
         nav ul{display:flex;list-style:none;gap:30px}
         nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s}
         nav a:hover{color:var(--primary)}
-        .hero{background:var(--grad);color:var(--text-light);padding:80px 0;text-align:center}
-        .hero h1{font-size:2.8rem;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
-        .hero-subtitle{font-size:1.3rem;opacity:.95;max-width:800px;margin:0 auto 30px}
-        .hero-image{max-width:600px;height:auto;border-radius:15px;box-shadow:0 20px 60px rgba(0,0,0,.3);margin-top:40px}
-        .features{padding:80px 0;background:var(--text-light)}
-        .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:50px}
-        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-        .feature-card{background:var(--bg-light);padding:30px;border-radius:15px;text-align:center;transition:transform .3s,box-shadow .3s}
-        .feature-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.1)}
-        .feature-icon{font-size:3rem;margin-bottom:20px}
-        .feature-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
-        .specs{padding:80px 0;background:var(--bg-light)}
-        .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-        .spec-card{background:var(--text-light);padding:25px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-        .spec-card h4{color:var(--primary);margin-bottom:15px;font-size:1.2rem;border-bottom:2px solid var(--primary);padding-bottom:10px}
-        .spec-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee}
-        .spec-item:last-child{border-bottom:none}
-        .spec-label{color:#666}
-        .spec-value{font-weight:600;color:var(--secondary)}
-        .gallery{padding:80px 0;background:var(--text-light)}
-        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer}
-        .gallery-item img{width:100%;height:200px;object-fit:cover;transition:transform .3s}
-        .gallery-item:hover img{transform:scale(1.1)}
-        .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);color:white;padding:10px;font-size:.9rem}
-        /* Lightbox */
-        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:9999;justify-content:center;align-items:center;flex-direction:column}
-        .lightbox.active{display:flex}
-        .lightbox-img{max-width:90%;max-height:80vh;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,.5);object-fit:contain;transition:opacity .3s}
-        .lightbox-caption{color:white;margin-top:15px;font-size:1.1rem;text-align:center}
-        .lightbox-close{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.15);color:white;border:none;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:background .3s;z-index:10}
-        .lightbox-close:hover{background:rgba(255,255,255,.3)}
-        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:white;border:none;font-size:2.5rem;width:60px;height:60px;border-radius:50%;cursor:pointer;transition:background .3s}
-        .lightbox-nav:hover{background:rgba(255,255,255,.3)}
-        .lightbox-prev{right:20px}
-        .lightbox-next{left:20px}
-        .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
-        .gallery-item .zoom-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,150,214,.85);color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:0;transition:opacity .3s;pointer-events:none}
-        .gallery-item:hover .zoom-icon{opacity:1}
-        /* Company Info */
-        .company-info{padding:80px 0;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);color:var(--text-light)}
-        .company-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
-        .company-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:15px;transition:transform .3s,border-color .3s}
-        .company-card:hover{transform:translateY(-5px);border-color:var(--primary)}
-        .company-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
-        .company-card p{line-height:2;color:rgba(255,255,255,.85)}
-        .company-card a{color:var(--primary);text-decoration:none;transition:color .3s}
-        .company-card a:hover{color:#00C6FF;text-decoration:underline}
+        .hero{background:var(--grad-dark);color:var(--text-light);padding:100px 0;text-align:center;position:relative;overflow:hidden}
+        .hero::before{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:url("Pict/HP_Official/07-Product-Shot-Front.jpg") center/cover;opacity:.15}
+        .hero-content{position:relative;z-index:1}
+        .hero h1{font-size:3rem;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
+        .hero h1 span{color:var(--primary)}
+        .hero-subtitle{font-size:1.3rem;opacity:.9;max-width:700px;margin:0 auto 40px}
+        .hero-btn{display:inline-block;background:var(--primary);color:white;padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 5px 20px rgba(0,150,214,.4)}
+        .hero-btn:hover{background:var(--primary-dark);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,150,214,.5)}
+        .services{padding:80px 0;background:var(--text-light)}
+        .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:15px}
+        .section-subtitle{text-align:center;color:#666;margin-bottom:50px;font-size:1.1rem}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+        .service-card{background:var(--bg-light);padding:40px 30px;border-radius:20px;text-align:center;transition:transform .3s,box-shadow .3s;border:2px solid transparent}
+        .service-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.1);border-color:var(--primary)}
+        .service-icon{width:80px;height:80px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:2.5rem}
+        .service-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
+        .service-card p{color:#666;line-height:1.8}
+        .about{padding:80px 0;background:var(--bg-light)}
+        .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px;align-items:center}
+        .about-content h2{font-size:2rem;color:var(--secondary);margin-bottom:20px}
+        .about-content p{color:#666;line-height:2;margin-bottom:15px}
+        .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+        .stat-box{text-align:center;padding:20px;background:var(--bg-light);border-radius:15px}
+        .stat-number{font-size:2rem;font-weight:800;color:var(--primary)}
+        .stat-label{color:#666;font-size:.9rem;margin-top:5px}
+        .contact{padding:80px 0;background:var(--grad-dark);color:var(--text-light)}
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+        .contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:20px;transition:transform .3s,border-color .3s}
+        .contact-card:hover{transform:translateY(-5px);border-color:var(--primary)}
+        .contact-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+        .contact-card p{line-height:2;color:rgba(255,255,255,.85)}
         .contact-item{display:flex;align-items:center;gap:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
         .contact-item:last-child{border-bottom:none}
         .contact-icon{width:45px;height:45px;background:rgba(0,150,214,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
@@ -71,160 +55,125 @@
         .contact-name{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:2px}
         .contact-number{font-size:1.1rem;font-weight:600;direction:ltr;text-align:right}
         .social-links{display:flex;gap:15px;margin-top:20px}
-        .social-link{width:50px;height:50px;background:rgba(0,150,214,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:background .3s,transform .3s;text-decoration:none}
+        .social-link{width:55px;height:55px;background:rgba(0,150,214,.2);border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;transition:background .3s,transform .3s;text-decoration:none;color:white}
         .social-link:hover{background:var(--primary);transform:translateY(-3px)}
-        .video-section{padding:80px 0;background:var(--bg-dark);color:var(--text-light);text-align:center}
-        .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-        .video-wrapper iframe{width:100%;height:450px;border:none}
-        footer{background:var(--bg-dark);color:var(--text-light);padding:40px 0 20px;text-align:center}
-        .footer-links{display:flex;justify-content:center;gap:30px;margin-bottom:30px;flex-wrap:wrap}
-        .footer-links a{color:var(--primary);text-decoration:none}
-        .footer-links a:hover{text-decoration:underline}
-        @media(max-width:768px){.hero h1{font-size:2rem}.header-content{flex-direction:column;gap:20px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}.hero-image{max-width:100%}}
+        .cta{padding:80px 0;background:var(--text-light);text-align:center}
+        .cta-box{background:var(--grad);padding:60px;border-radius:30px;color:white;box-shadow:0 20px 60px rgba(0,150,214,.3)}
+        .cta-box h2{font-size:2rem;margin-bottom:15px}
+        .cta-box p{font-size:1.1rem;opacity:.9;margin-bottom:30px}
+        .cta-btn{display:inline-block;background:white;color:var(--primary);padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .3s}
+        .cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
+        footer{background:var(--bg-dark);color:var(--text-light);padding:30px 0 20px;text-align:center}
+        footer p{opacity:.6;font-size:.9rem}
+        .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:15px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none;font-size:.9rem}
+        @media(max-width:768px){.hero h1{font-size:2rem}.header-content{flex-direction:column;gap:20px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}.about-stats{grid-template-columns:repeat(3,1fr);gap:10px}.cta-box{padding:40px 20px}}
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo">HP ZBook Firefly</div>
+            <div class="logo">ال<span>راعي</span></div>
             <nav><ul>
-                <li><a href="#features">المميزات</a></li>
-                <li><a href="#specs">المواصفات</a></li>
-                <li><a href="#gallery">المعرض</a></li>
-                <li><a href="#video">الفيديو</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#about">عن الشركه</a></li>
                 <li><a href="#contact">التواصل</a></li>
+                <li><a href="zbook.html">اللابتوب</a></li>
             </ul></nav>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h1>HP ZBook Firefly 14 G11</h1>
-            <p class="hero-subtitle">لابتوب HP ZBook Firefly 14 G11 - اداء احترافي فائق للمحترفين</p>
-            <img src="Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="hero-image">
+        <div class="hero-content">
+            <h1>ال<span>راعي</span> لخدمات الكمبيوتر</h1>
+            <p class="hero-subtitle">شريكك الموثوق في خدمات الكمبيوتر واللابتوب وكاميرات المراقبة في اسيوط - ديروط</p>
+            <a href="#contact" class="hero-btn">تواصل معنا</a>
         </div>
     </section>
 
-    <section class="features" id="features">
+    <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">مميزات الحاسوب</h2>
-            <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon">&#9889;</div><h3>معالج فائق الأداء</h3><p>Intel Core Ultra 7 165H بـ 16 نواة و22 خيط معالجة</p></div>
-                <div class="feature-card"><div class="feature-icon">&#127918;</div><h3>كرت شاشة احترافي</h3><p>NVIDIA RTX A500 بذاكرة 4GB GDDR6 للرسوميات المتقدمة</p></div>
-                <div class="feature-card"><div class="feature-icon">&#129504;</div><h3>وحدة معالجة ذكاء اصطناعي</h3><p>Intel NPU لمعالجة حملات الذكاء الاصطناعي بكفاءة عالية</p></div>
-                <div class="feature-card"><div class="feature-icon">&#128190;</div><h3>ذاكرة واسعة</h3><p>16GB DDR5-5600 مع إمكانية الترقية</p></div>
-                <div class="feature-card"><div class="feature-icon">&#128274;</div><h3>أمان متقدم</h3><p>HP Wolf Security مع Intel vPRO وTPM 2.0</p></div>
-                <div class="feature-card"><div class="feature-icon">&#128246;</div><h3>اتصال لاسلكي سريع</h3><p>Intel Wi-Fi 6E AX211 للاتصال فائق السرعة</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="specs" id="specs">
-        <div class="container">
-            <h2 class="section-title">المواصفات الفنية</h2>
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <h4>المعالج</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core Ultra 7 165H</span></div>
-                    <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">16 (6P + 8E + 2 LP-E)</span></div>
-                    <div class="spec-item"><span class="spec-label">عدد الخيوط</span><span class="spec-value">22</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">1.40 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">5.0 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الذاكرة المخبئية L3</span><span class="spec-value">24 MB</span></div>
+            <h2 class="section-title">خدماتنا</h2>
+            <p class="section-subtitle">نوفر افضل الخدمات والمنتجات بافضل الاسعار</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#128187;</div>
+                    <h3>بيع واصلاح الكمبيوترات</h3>
+                    <p>بيع جميع انواع الكمبيوترات المكتبيه والمحموله مع خدمات الصيانه والاصلاح باحترافيه</p>
                 </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - NVIDIA</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">NVIDIA RTX A500</span></div>
-                    <div class="spec-item"><span class="spec-label">ذاكرة الفيديو</span><span class="spec-value">4 GB GDDR6</span></div>
-                    <div class="spec-item"><span class="spec-label">نواة الرسوميات</span><span class="spec-value">2048</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى تتبع الأشعة</span><span class="spec-value">16</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى التنسور</span><span class="spec-value">64</span></div>
-                    <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
+                <div class="service-card">
+                    <div class="service-icon">&#128241;</div>
+                    <h3>بيع واصلاح اللابتوب</h3>
+                    <p>جميع ماركات اللابتوب زي HP وDell وLenovo مع قطع غيار اصليه وضمان</p>
                 </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - Intel</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Meteor Lake</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى Xe</span><span class="spec-value">8</span></div>
-                    <div class="spec-item"><span class="spec-label">وحدات التنفيذ</span><span class="spec-value">128 EU / 1024 ALU</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">2300 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
+                <div class="service-card">
+                    <div class="service-icon">&#128249;</div>
+                    <h3>كاميرات المراقبة</h3>
+                    <p>تركيب واصلاح و صيانه كاميرات المراقبه لمنزلك او شركتك باحدث التقنيات</p>
                 </div>
-                <div class="spec-card">
-                    <h4>شريحة الذكاء الاصطناعي - NPU</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel AI Boost</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
-                    <div class="spec-item"><span class="spec-label">البلاطات</span><span class="spec-value">2 NPU Tiles</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">333 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">700 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الاستخدام</span><span class="spec-value">تطبيقات الذكاء الاصطناعي</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>الذاكرة العشوائية</h4>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">16 GB DDR5</span></div>
-                    <div class="spec-item"><span class="spec-label">السرعة</span><span class="spec-value">5600 MT/s</span></div>
-                    <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
-                    <div class="spec-item"><span class="spec-label">القنوات</span><span class="spec-value">مزدوجة</span></div>
-                    <div class="spec-item"><span class="spec-label">المنشئ</span><span class="spec-value">Samsung</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>التخزين</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Samsung NVMe</span></div>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">256 GB</span></div>
-                    <div class="spec-item"><span class="spec-label">الواجهة</span><span class="spec-value">PCIe x4 NVMe 1.4</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>الاتصالات</h4>
-                    <div class="spec-item"><span class="spec-label">Wi-Fi</span><span class="spec-value">Intel AX211 6E</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد</span><span class="spec-value">160 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الشرائح</span><span class="spec-value">Intel vPRO</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>البطارية والنظام</h4>
-                    <div class="spec-item"><span class="spec-label">سعة البطارية</span><span class="spec-value">56 Wh</span></div>
-                    <div class="spec-item"><span class="spec-label">نظام التشغيل</span><span class="spec-value">Windows 11 Pro</span></div>
-                    <div class="spec-item"><span class="spec-label">الأمان</span><span class="spec-value">HP Wolf Security + TPM 2.0</span></div>
+                <div class="service-card">
+                    <div class="service-icon">&#128295;</div>
+                    <h3>خدمات الصيانه</h3>
+                    <p>صيانه دوريه واحترافيه لجميع اجهزتك الالكترونيه مع ضمان على العمل</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="gallery" id="gallery">
+    <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">معرض الصور</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox(0)"><img src="Pict/24-Laptop-Full_Front_Open.jpg" alt="اللابتوب مفتوح"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوضع المفتوح بالكامل</div></div>
-                <div class="gallery-item" onclick="openLightbox(1)"><img src="Pict/23-Laptop-Keyboard_Top.jpg" alt="لوحة المفاتيح"><div class="zoom-icon">+</div><div class="gallery-caption">لوحة المفاتيح مع الإضاءة الخلفية</div></div>
-                <div class="gallery-item" onclick="openLightbox(2)"><img src="Pict/26-Laptop-Top_Lid_Closed.jpg" alt="الغطاء"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الغطاء العلوي</div></div>
-                <div class="gallery-item" onclick="openLightbox(3)"><img src="Pict/25-Laptop-Side_Closed.jpg" alt="الجانب"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب الجانبي</div></div>
-                <div class="gallery-item" onclick="openLightbox(4)"><img src="Pict/HP_Official/08-Product-Shot-Angle.jpg" alt="زاوية"><div class="zoom-icon">+</div><div class="gallery-caption">زاوية عرض من HP</div></div>
-                <div class="gallery-item" onclick="openLightbox(5)"><img src="Pict/HP_Official/09-Product-Shot-Side.jpg" alt="الجانب"><div class="zoom-icon">+</div><div class="gallery-caption">عرض جانبي من HP</div></div>
-                <div class="gallery-item" onclick="openLightbox(6)"><img src="Pict/HP_Official/10-Product-Shot-Back.jpg" alt="الخلف"><div class="zoom-icon">+</div><div class="gallery-caption">الظهر من HP</div></div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>ليه تختار الراعي؟</h2>
+                    <p>احنا في الراعي بنقدم افضل خدمات الكمبيوتر واللابتوب وكاميرات المراقبه في منطقه اسيوط - ديروط. خبره سنين في المجال وعملاء راضيين.</p>
+                    <p>فريق عمل مدرب ومحترف جاهز يساعدك في اي مشكله تواجهك مع اجهزتك الالكترونيه.</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <div class="stat-number">+1000</div>
+                            <div class="stat-label">عميل راضي</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">+10</div>
+                            <div class="stat-label">سنه خبره</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">دعم فني</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <div style="background:var(--grad);padding:60px;border-radius:30px;color:white">
+                        <div style="font-size:4rem;margin-bottom:20px">&#128274;</div>
+                        <h3 style="font-size:1.5rem;margin-bottom:10px">ضمان على كل الخدمات</h3>
+                        <p style="opacity:.9">كل خدمه ليها ضمان عشان تطمن</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="video-section" id="video">
+    <section class="cta">
         <div class="container">
-            <h2 class="section-title" style="color:#fff">فيديو التعريف</h2>
-            <p style="margin-bottom:30px;font-size:1.1rem;opacity:.9">شاهد مراجعة شاملة للابتوب</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/mHkxw4p8xEU" title="HP ZBook Firefly 14 G11 Review" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+            <div class="cta-box">
+                <h2>عندك لابتوب HP عاوز تعرف مواصفاته؟</h2>
+                <p>شوف مواصفات HP ZBook Firefly 14 G11 بالتفصيل</p>
+                <a href="zbook.html" class="cta-btn">شوف اللابتوب &#8592;</a>
             </div>
         </div>
     </section>
 
-    <section class="company-info" id="contact">
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title" style="color:#fff">الراعي - بيانات التواصل</h2>
-            <p style="text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem">شريكك الموثوق في خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
-            <div class="company-grid">
-                <div class="company-card">
+            <h2 class="section-title" style="color:#fff">تواصل معنا</h2>
+            <p style="text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem">احنا هنا عشان نساعدك - اتصل بنا او زورنا</p>
+            <div class="contact-grid">
+                <div class="contact-card">
                     <h4>&#128205; العنوان</h4>
                     <p>اسيوط / ديروط / ابو جبل</p>
                     <p>امام مستشفي الامين - الراعي</p>
                 </div>
-                <div class="company-card">
+                <div class="contact-card">
                     <h4>&#128222; ارقام الاتصال</h4>
                     <div class="contact-item">
                         <div class="contact-icon">&#128100;</div>
@@ -241,9 +190,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="company-card">
+                <div class="contact-card">
                     <h4>&#127760; تابعنا</h4>
-                    <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض والاخبار</p>
+                    <p>تابعنا على صفحاتنا الرسميه للحصول على احدث العروض والاخبار</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه">&#102;</a>
                         <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه">&#128295;</a>
@@ -260,83 +209,13 @@
     <footer>
         <div class="container">
             <div class="footer-links">
-                <a href="https://www.hp.com/us-en/workstations/zbook-firefly.html" target="_blank">صفحة HP الرسمية</a>
-                <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_QuickSpecs.pdf" target="_blank">المواصفات الرسمية</a>
-                <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_Datasheet.pdf" target="_blank">ورقة البيانات</a>
+                <a href="#services">خدماتنا</a>
+                <a href="#about">عن الشركه</a>
+                <a href="#contact">التواصل</a>
+                <a href="zbook.html">اللابتوب</a>
             </div>
-            <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
-                <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
-                <span id="finicount_views" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
-            </div>
-            <p style="opacity:.6;font-size:.85rem;margin-top:10px">© 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
+            <p>&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
         </div>
     </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
-        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
-        <div class="lightbox-counter" id="lightbox-counter"></div>
-    </div>
-
-    <script>
-        const galleryImages = [
-            {src: "Pict/24-Laptop-Full_Front_Open.jpg", caption: "اللابتوب - الوضع المفتوح بالكامل"},
-            {src: "Pict/23-Laptop-Keyboard_Top.jpg", caption: "لوحة المفاتيح مع الإضاءة الخلفية"},
-            {src: "Pict/26-Laptop-Top_Lid_Closed.jpg", caption: "اللابتوب - الغطاء العلوي"},
-            {src: "Pict/25-Laptop-Side_Closed.jpg", caption: "اللابتوب - الجانب الجانبي"},
-            {src: "Pict/HP_Official/08-Product-Shot-Angle.jpg", caption: "زاوية عرض من HP"},
-            {src: "Pict/HP_Official/09-Product-Shot-Side.jpg", caption: "عرض جانبي من HP"},
-            {src: "Pict/HP_Official/10-Product-Shot-Back.jpg", caption: "الظهر من HP"}
-        ];
-        let currentIndex = 0;
-
-        function openLightbox(index) {
-            currentIndex = index;
-            updateLightbox();
-            document.getElementById("lightbox").classList.add("active");
-            document.body.style.overflow = "hidden";
-        }
-
-        function closeLightbox() {
-            document.getElementById("lightbox").classList.remove("active");
-            document.body.style.overflow = "";
-        }
-
-        function navigateLightbox(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
-            if (currentIndex >= galleryImages.length) currentIndex = 0;
-            updateLightbox();
-        }
-
-        function updateLightbox() {
-            const img = document.getElementById("lightbox-img");
-            const caption = document.getElementById("lightbox-caption");
-            const counter = document.getElementById("lightbox-counter");
-            img.style.opacity = 0;
-            setTimeout(function() {
-                img.src = galleryImages[currentIndex].src;
-                caption.textContent = galleryImages[currentIndex].caption;
-                counter.textContent = (currentIndex + 1) + " / " + galleryImages.length;
-                img.style.opacity = 1;
-            }, 150);
-        }
-
-        document.addEventListener("keydown", function(e) {
-            if (!document.getElementById("lightbox").classList.contains("active")) return;
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowRight") navigateLightbox(-1);
-            if (e.key === "ArrowLeft") navigateLightbox(1);
-        });
-
-        document.getElementById("lightbox").addEventListener("click", function(e) {
-            if (e.target === this) closeLightbox();
-        });
-    </script>
-    <script async src="//finicounter.eu.org/finicounter.js"></script>
 </body>
 </html>
