@@ -1,6 +1,0 @@
-Hp Pro book 650 G3
-Cpu Intel Core I7-7600U
-Ram 8G DDR4
-Ssd 256G
-Gpu Intel HD Graphics 620
-Gpu Amd Radeon R7 M350 2G GDDR5
