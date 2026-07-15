@@ -78,6 +78,7 @@ Each laptop page must include:
 - YouTube video embed with Arabic title
 - Facebook social links
 - Company contact info (Address, Phone numbers)
+- Visitor counter at the bottom of every page (using FiniCounter)
 
 ## Deployment Rules
 - Changes must be pushed to both `master` and `gh-pages` branches
