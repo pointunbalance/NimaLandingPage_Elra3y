@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" style="-webkit-tap-highlight-color:transparent">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,11 +141,11 @@
                     <p>فريق عمل مدرب ومحترف جاهز يساعدك في اي مشكله تواجهك مع اجهزتك الالكترونيه.</p>
                     <div class="about-stats">
                         <div class="stat-box">
-                            <div class="stat-number">+1000</div>
+                            <div class="stat-number" title="يحتاج تأكيد">—</div>
                             <div class="stat-label">عميل راضي</div>
                         </div>
                         <div class="stat-box">
-                            <div class="stat-number">+10</div>
+                            <div class="stat-number" title="يحتاج تأكيد">—</div>
                             <div class="stat-label">سنه خبره</div>
                         </div>
                         <div class="stat-box">
@@ -208,19 +208,27 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="background:var(--grad-dark);color:var(--text-light);padding:60px 0 30px">
         <div class="container">
-            <div class="footer-links">
-                <a href="#services">خدماتنا</a>
-                <a href="#about">عن الشركه</a>
-                <a href="laptops.html">اللابتوبات</a>
-                <a href="#contact">التواصل</a>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:40px;margin-bottom:40px">
+                <div>
+                    <div style="font-family:var(--font-display);font-size:2rem;font-weight:900;color:var(--primary);margin-bottom:10px">ال<span style="color:var(--text-light)">راعي</span></div>
+                    <p style="opacity:.7;max-width:300px;line-height:1.8">افضل خدمات الكمبيوتر واللابتوب وكاميرات المراقبه في منطقه اسيوط - ديروط</p>
+                </div>
+                <div class="footer-links" style="display:flex;gap:30px;flex-wrap:wrap">
+                    <a href="#services" style="color:var(--text-light);text-decoration:none;opacity:.8;transition:opacity .3s">خدماتنا</a>
+                    <a href="#about" style="color:var(--text-light);text-decoration:none;opacity:.8;transition:opacity .3s">عن الشركه</a>
+                    <a href="laptops.html" style="color:var(--text-light);text-decoration:none;opacity:.8;transition:opacity .3s">اللابتوبات</a>
+                    <a href="#contact" style="color:var(--text-light);text-decoration:none;opacity:.8;transition:opacity .3s">التواصل</a>
+                </div>
             </div>
-            <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
-                <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
-                <span id="finicount_views" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
+            <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px">
+                <div style="display:flex;align-items:center;gap:10px">
+                    <span style="opacity:.6;font-size:.85rem">عدد الزوار:</span>
+                    <span id="finicount_views" style="background:var(--primary);color:white;padding:6px 16px;border-radius:var(--radius);font-weight:700;font-size:.9rem;min-width:50px;text-align:center">...</span>
+                </div>
+                <p style="opacity:.5;font-size:.8rem">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
             </div>
-            <p style="opacity:.6;font-size:.85rem;margin-top:10px">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
         </div>
     </footer>
 
