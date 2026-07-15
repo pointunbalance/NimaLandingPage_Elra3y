@@ -87,9 +87,19 @@
         .lightbox-next{left:20px}
         .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
         @media(max-width:768px){.hero h1{font-size:2rem}.header-content{flex-direction:column;gap:20px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}.hero-image{max-width:100%}}
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6)}
+        .footer-counter-value{background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:.85rem;margin-top:10px}
+        .video-section{background:var(--bg-light);padding:80px 0}
+        .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.15)}
+        .video-wrapper iframe{display:block}
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
     <header>
         <div class="container header-content">
             <div class="logo">Dell Latitude</div>
@@ -103,143 +113,145 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1 translate="no">Dell Latitude E5570</h1>
-            <p class="hero-subtitle">لابتوب احترافي للعمل - معالج Intel Core i7 وكرت شاشة AMD Radeon</p>
-            <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="hero-image" width="500" height="350" fetchpriority="high">
-        </div>
-    </section>
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1 translate="no">Dell Latitude E5570</h1>
+                <p class="hero-subtitle">لابتوب احترافي للعمل - معالج Intel Core i7 وكرت شاشة AMD Radeon</p>
+                <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="hero-image" width="500" height="350" fetchpriority="high">
+            </div>
+        </section>
 
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">مميزات اللابتوب</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">&#9889;</div>
-                    <h3>معالج قوي</h3>
-                    <p>Intel Core i7-6600U للاداء العالي في جميع المهام</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">&#127918;</div>
-                    <h3>كرت شاشة مخصص</h3>
-                    <p>AMD Radeon R7 M360 للرسوميات والألعاب الخفيفة</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">&#128190;</div>
-                    <h3>تخزين سريع</h3>
-                    <p>SSD NVMe 256GB للسرعة الفائقه في التشغيل والاقلاع</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon" aria-hidden="true">&#128187;</div>
-                    <h3>تصميم احترافي</h3>
-                    <p>تصميم متين ومناسب لبيئة العمل</p>
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">مميزات اللابتوب</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
+                        <h3>معالج قوي</h3>
+                        <p>Intel Core i7-6600U للاداء العالي في جميع المهام</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#127918;</div>
+                        <h3>كرت شاشة مخصص</h3>
+                        <p>AMD Radeon R7 M360 للرسوميات والألعاب الخفيفة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128190;</div>
+                        <h3>تخزين سريع</h3>
+                        <p>SSD NVMe 256GB للسرعة الفائقه في التشغيل والاقلاع</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <h3>تصميم احترافي</h3>
+                        <p>تصميم متين ومناسب لبيئة العمل</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="specs" id="specs">
-        <div class="container">
-            <h2 class="section-title">المواصفات الفنية</h2>
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <h4>المعالج</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core i7-6600U</span></div>
-                    <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">2 نواة / 4 خيط</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">2.60 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">3.40 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الكاش</span><span class="spec-value">4 MB</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - AMD</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">AMD Radeon R7 M360</span></div>
-                    <div class="spec-item"><span class="spec-label">ذاكرة الفيديو</span><span class="spec-value">2 GB DDR3</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مخصص (Discrete)</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - Intel</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel HD Graphics 520</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>الذاكرة العشوائية</h4>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">8 GB DDR4</span></div>
-                    <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>التخزين</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">SSD NVMe</span></div>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">256 GB</span></div>
+        <section class="specs" id="specs">
+            <div class="container">
+                <h2 class="section-title">المواصفات الفنية</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>المعالج</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core i7-6600U</span></div>
+                        <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">2 نواة / 4 خيط</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">2.60 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">3.40 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الكاش</span><span class="spec-value">4 MB</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>كرت الشاشة - AMD</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">AMD Radeon R7 M360</span></div>
+                        <div class="spec-item"><span class="spec-label">ذاكرة الفيديو</span><span class="spec-value">2 GB DDR3</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مخصص (Discrete)</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>كرت الشاشة - Intel</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel HD Graphics 520</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الذاكرة العشوائية</h4>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">8 GB DDR4</span></div>
+                        <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>التخزين</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">SSD NVMe</span></div>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">256 GB</span></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">معرض الصور</h2>
-            <div class="gallery-grid">
-                <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/1-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
-                <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه"><img src="Pict/2-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الزاويه</div></button>
-                <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/3-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
-                <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/4-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
-                <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/5-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
-                <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض الصورة الرسمية - الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الوجه الامامي</div></button>
-                <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض الصورة الرسمية - الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الزاويه</div></button>
-                <button class="gallery-item" onclick="openLightbox(7)" aria-label="عرض الصورة الرسمية - من الجنب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - من الجنب</div></button>
-                <button class="gallery-item" onclick="openLightbox(8)" aria-label="عرض الصورة الرسمية - الظهر"><img src="Pict/Dell_Official/04-Product-Back-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الظهر</div></button>
-                <button class="gallery-item" onclick="openLightbox(9)" aria-label="عرض الصورة الرسمية - لوحة المفاتيح"><img src="Pict/Dell_Official/05-Product-Keyboard.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - لوحة المفاتيح</div></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="features" style="background:var(--bg-light)">
-        <div class="container">
-            <h2 class="section-title">&#127909; فيديو مراجعة اللابتوب</h2>
-            <div style="max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.15)">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/O2f0wh50TU0" title="Dell Latitude E5570 Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="company-info" id="contact">
-        <div class="container">
-            <h2 class="section-title section-title--light">بيانات التواصل</h2>
-            <div class="company-grid">
-                <div class="company-card">
-                    <h4>&#128205; العنوان</h4>
-                    <p>اسيوط / ديروط / ابو جبل</p>
-                    <p>امام مستشفي الامين - الراعي</p>
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">معرض الصور</h2>
+                <div class="gallery-grid">
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/1-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه"><img src="Pict/2-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الزاويه</div></button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/3-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/4-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/5-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
+                    <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض الصورة الرسمية - الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الوجه الامامي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض الصورة الرسمية - الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الزاويه</div></button>
+                    <button class="gallery-item" onclick="openLightbox(7)" aria-label="عرض الصورة الرسمية - من الجنب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - من الجنب</div></button>
+                    <button class="gallery-item" onclick="openLightbox(8)" aria-label="عرض الصورة الرسمية - الظهر"><img src="Pict/Dell_Official/04-Product-Back-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الظهر</div></button>
+                    <button class="gallery-item" onclick="openLightbox(9)" aria-label="عرض الصورة الرسمية - لوحة المفاتيح"><img src="Pict/Dell_Official/05-Product-Keyboard.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - لوحة المفاتيح</div></button>
                 </div>
-                <div class="company-card">
-                    <h4>&#128222; ارقام الاتصال</h4>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#128100;</div>
-                        <div class="contact-details">
-                            <div class="contact-name">مينا</div>
-                            <div class="contact-number" dir="ltr">01208063327</div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title">&#127909; فيديو مراجعة اللابتوب</h2>
+                <div class="video-wrapper">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/O2f0wh50TU0" title="Dell Latitude E5570 Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-info" id="contact">
+            <div class="container">
+                <h2 class="section-title section-title--light">بيانات التواصل</h2>
+                <div class="company-grid">
+                    <div class="company-card">
+                        <h4>&#128205; العنوان</h4>
+                        <p>اسيوط / ديروط / ابو جبل</p>
+                        <p>امام مستشفي الامين - الراعي</p>
+                    </div>
+                    <div class="company-card">
+                        <h4>&#128222; ارقام الاتصال</h4>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">مينا</div>
+                                <div class="contact-number" dir="ltr">01208063327</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">ابراهيم</div>
+                                <div class="contact-number" dir="ltr">01068857705</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#128100;</div>
-                        <div class="contact-details">
-                            <div class="contact-name">ابراهيم</div>
-                            <div class="contact-number" dir="ltr">01068857705</div>
+                    <div class="company-card">
+                        <h4>&#127760; تابعنا</h4>
+                        <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
                         </div>
                     </div>
                 </div>
-                <div class="company-card">
-                    <h4>&#127760; تابعنا</h4>
-                    <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
-                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -248,15 +260,15 @@
                 <a href="../laptops.html">اللابتوبات</a>
                 <a href="#contact">التواصل</a>
             </div>
-            <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
-                <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
-                <span id="finicount_views" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
             </div>
-            <p style="opacity:.6;font-size:.85rem;margin-top:10px">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+            <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
         </div>
     </footer>
 
-    <script async src="//finicounter.eu.org/finicounter.js"></script>
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
 
     <div class="lightbox" id="lightbox">
         <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق">&times;</button>

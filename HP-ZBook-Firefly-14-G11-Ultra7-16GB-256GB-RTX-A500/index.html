@@ -94,9 +94,22 @@
         .footer-links a{color:var(--primary);text-decoration:none}
         .footer-links a:hover{text-decoration:underline}
         @media(max-width:768px){.hero h1{font-size:2rem}.header-content{flex-direction:column;gap:20px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}.hero-image{max-width:100%}}
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6)}
+        .footer-counter-value{background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:.85rem;margin-top:10px}
+        .section-subtitle{text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem}
+        .cta-btn-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+        .cta-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s}
+        .cta-btn-primary:hover{background:var(--primary-dark)}
+        .cta-btn-facebook{display:inline-flex;align-items:center;gap:8px;background:var(--facebook);color:var(--text-light);padding:12px 25px;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:background .3s}
+        .video-subtitle{margin-bottom:30px;font-size:1.1rem;opacity:.9}
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
     <header>
         <div class="container header-content">
             <div class="logo">HP ZBook Firefly</div>
@@ -110,163 +123,165 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1 translate="no">HP ZBook Firefly 14 G11</h1>
-            <p class="hero-subtitle">لابتوب HP ZBook Firefly 14 G11 - اداء احترافي فائق للمحترفين</p>
-            <img src="Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="hero-image" width="600" height="400" fetchpriority="high">
-        </div>
-    </section>
-
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">مميزات الحاسوب</h2>
-            <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#9889;</div><h3>معالج فائق الأداء</h3><p>Intel Core Ultra 7 165H بـ 16 نواة و22 خيط معالجة</p></div>
-                <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#127918;</div><h3>كرت شاشة احترافي</h3><p>NVIDIA RTX A500 بذاكرة 4GB GDDR6 للرسوميات المتقدمة</p></div>
-                <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#128190;</div><h3>تخزين فائق السرعة</h3><p>SSD 256GB NVMe للسرعة الفائقه في التشغيل والاقلاع</p></div>
-                <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#128187;</div><h3>ذاكرة واسعة</h3><p>16GB DDR5-5600 مع إمكانية الترقية</p></div>
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1 translate="no">HP ZBook Firefly 14 G11</h1>
+                <p class="hero-subtitle">لابتوب HP ZBook Firefly 14 G11 - اداء احترافي فائق للمحترفين</p>
+                <img src="Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="hero-image" width="600" height="400" fetchpriority="high">
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="specs" id="specs">
-        <div class="container">
-            <h2 class="section-title">المواصفات الفنية</h2>
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <h4>المعالج</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core Ultra 7 165H</span></div>
-                    <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">16 (6P + 8E + 2 LP-E)</span></div>
-                    <div class="spec-item"><span class="spec-label">عدد الخيوط</span><span class="spec-value">22</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">1.40 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">5.0 GHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الذاكرة المخبئية L3</span><span class="spec-value">24 MB</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - NVIDIA</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">NVIDIA RTX A500</span></div>
-                    <div class="spec-item"><span class="spec-label">ذاكرة الفيديو</span><span class="spec-value">4 GB GDDR6</span></div>
-                    <div class="spec-item"><span class="spec-label">نواة الرسوميات</span><span class="spec-value">2048</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى تتبع الأشعة</span><span class="spec-value">16</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى التنسور</span><span class="spec-value">64</span></div>
-                    <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>كرت الشاشة - Intel</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Meteor Lake</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
-                    <div class="spec-item"><span class="spec-label">نوى Xe</span><span class="spec-value">8</span></div>
-                    <div class="spec-item"><span class="spec-label">وحدات التنفيذ</span><span class="spec-value">128 EU / 1024 ALU</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">2300 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>شريحة الذكاء الاصطناعي - NPU</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel AI Boost</span></div>
-                    <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
-                    <div class="spec-item"><span class="spec-label">البلاطات</span><span class="spec-value">2 NPU Tiles</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">333 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">700 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الاستخدام</span><span class="spec-value">تطبيقات الذكاء الاصطناعي</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>الذاكرة العشوائية</h4>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">16 GB DDR5</span></div>
-                    <div class="spec-item"><span class="spec-label">السرعة</span><span class="spec-value">5600 MT/s</span></div>
-                    <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
-                    <div class="spec-item"><span class="spec-label">القنوات</span><span class="spec-value">مزدوجة</span></div>
-                    <div class="spec-item"><span class="spec-label">المنشئ</span><span class="spec-value">Samsung</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>التخزين</h4>
-                    <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Samsung NVMe</span></div>
-                    <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">256 GB</span></div>
-                    <div class="spec-item"><span class="spec-label">الواجهة</span><span class="spec-value">PCIe x4 NVMe 1.4</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>الاتصالات</h4>
-                    <div class="spec-item"><span class="spec-label">Wi-Fi</span><span class="spec-value">Intel AX211 6E</span></div>
-                    <div class="spec-item"><span class="spec-label">التردد</span><span class="spec-value">160 MHz</span></div>
-                    <div class="spec-item"><span class="spec-label">الشرائح</span><span class="spec-value">Intel vPRO</span></div>
-                </div>
-                <div class="spec-card">
-                    <h4>البطارية والنظام</h4>
-                    <div class="spec-item"><span class="spec-label">سعة البطارية</span><span class="spec-value">56 Wh</span></div>
-                    <div class="spec-item"><span class="spec-label">نظام التشغيل</span><span class="spec-value">Windows 11 Pro</span></div>
-                    <div class="spec-item"><span class="spec-label">الأمان</span><span class="spec-value">HP Wolf Security + TPM 2.0</span></div>
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">مميزات الحاسوب</h2>
+                <div class="features-grid">
+                    <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#9889;</div><h3>معالج فائق الأداء</h3><p>Intel Core Ultra 7 165H بـ 16 نواة و22 خيط معالجة</p></div>
+                    <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#127918;</div><h3>كرت شاشة احترافي</h3><p>NVIDIA RTX A500 بذاكرة 4GB GDDR6 للرسوميات المتقدمة</p></div>
+                    <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#128190;</div><h3>تخزين فائق السرعة</h3><p>SSD 256GB NVMe للسرعة الفائقه في التشغيل والاقلاع</p></div>
+                    <div class="feature-card"><div class="feature-icon" aria-hidden="true">&#128187;</div><h3>ذاكرة واسعة</h3><p>16GB DDR5-5600 مع إمكانية الترقية</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <h2 class="section-title">معرض الصور</h2>
-            <div class="gallery-grid">
-                <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة اللابتوب مفتوح"><img src="Pict/24-Laptop-Full_Front_Open.jpg" alt="اللابتوب مفتوح" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوضع المفتوح بالكامل</div></button>
-                <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/23-Laptop-Keyboard_Top.jpg" alt="لوحة المفاتيح" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">لوحة المفاتيح مع الإضاءة الخلفية</div></button>
-                <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة الغطاء"><img src="Pict/26-Laptop-Top_Lid_Closed.jpg" alt="الغطاء" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الغطاء العلوي</div></button>
-                <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/25-Laptop-Side_Closed.jpg" alt="الجانب" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب الجانبي</div></button>
-                <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الزاوية"><img src="Pict/HP_Official/08-Product-Shot-Angle.jpg" alt="زاوية" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">زاوية عرض من HP</div></button>
-                <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض صورة الجانب"><img src="Pict/HP_Official/09-Product-Shot-Side.jpg" alt="الجانب" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">عرض جانبي من HP</div></button>
-                <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض صورة الظهر"><img src="Pict/HP_Official/10-Product-Shot-Back.jpg" alt="الخلف" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الظهر من HP</div></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="video-section" id="video">
-        <div class="container">
-            <h2 class="section-title section-title--light">فيديو التعريف</h2>
-            <p style="margin-bottom:30px;font-size:1.1rem;opacity:.9">شاهد مراجعة شاملة للابتوب</p>
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/mHkxw4p8xEU" title="HP ZBook Firefly 14 G11 Review" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="company-info" id="contact">
-        <div class="container">
-            <h2 class="section-title section-title--light">الراعي - بيانات التواصل</h2>
-            <p style="text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem">شريكك الموثوق في خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
-            <div class="company-grid">
-                <div class="company-card">
-                    <h4>&#128205; العنوان</h4>
-                    <p>اسيوط / ديروط / ابو جبل</p>
-                    <p>امام مستشفي الامين - الراعي</p>
+        <section class="specs" id="specs">
+            <div class="container">
+                <h2 class="section-title">المواصفات الفنية</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>المعالج</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core Ultra 7 165H</span></div>
+                        <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">16 (6P + 8E + 2 LP-E)</span></div>
+                        <div class="spec-item"><span class="spec-label">عدد الخيوط</span><span class="spec-value">22</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">1.40 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">5.0 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الذاكرة المخبئية L3</span><span class="spec-value">24 MB</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>كرت الشاشة - NVIDIA</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">NVIDIA RTX A500</span></div>
+                        <div class="spec-item"><span class="spec-label">ذاكرة الفيديو</span><span class="spec-value">4 GB GDDR6</span></div>
+                        <div class="spec-item"><span class="spec-label">نواة الرسوميات</span><span class="spec-value">2048</span></div>
+                        <div class="spec-item"><span class="spec-label">نوى تتبع الأشعة</span><span class="spec-value">16</span></div>
+                        <div class="spec-item"><span class="spec-label">نوى التنسور</span><span class="spec-value">64</span></div>
+                        <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>كرت الشاشة - Intel</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Meteor Lake</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
+                        <div class="spec-item"><span class="spec-label">نوى Xe</span><span class="spec-value">8</span></div>
+                        <div class="spec-item"><span class="spec-label">وحدات التنفيذ</span><span class="spec-value">128 EU / 1024 ALU</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">2300 MHz</span></div>
+                        <div class="spec-item"><span class="spec-label">DirectX</span><span class="spec-value">12</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>شريحة الذكاء الاصطناعي - NPU</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel AI Boost</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
+                        <div class="spec-item"><span class="spec-label">البلاطات</span><span class="spec-value">2 NPU Tiles</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">333 MHz</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأقصى</span><span class="spec-value">700 MHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الاستخدام</span><span class="spec-value">تطبيقات الذكاء الاصطناعي</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الذاكرة العشوائية</h4>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">16 GB DDR5</span></div>
+                        <div class="spec-item"><span class="spec-label">السرعة</span><span class="spec-value">5600 MT/s</span></div>
+                        <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
+                        <div class="spec-item"><span class="spec-label">القنوات</span><span class="spec-value">مزدوجة</span></div>
+                        <div class="spec-item"><span class="spec-label">المنشئ</span><span class="spec-value">Samsung</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>التخزين</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Samsung NVMe</span></div>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">256 GB</span></div>
+                        <div class="spec-item"><span class="spec-label">الواجهة</span><span class="spec-value">PCIe x4 NVMe 1.4</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الاتصالات</h4>
+                        <div class="spec-item"><span class="spec-label">Wi-Fi</span><span class="spec-value">Intel AX211 6E</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد</span><span class="spec-value">160 MHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الشرائح</span><span class="spec-value">Intel vPRO</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>البطارية والنظام</h4>
+                        <div class="spec-item"><span class="spec-label">سعة البطارية</span><span class="spec-value">56 Wh</span></div>
+                        <div class="spec-item"><span class="spec-label">نظام التشغيل</span><span class="spec-value">Windows 11 Pro</span></div>
+                        <div class="spec-item"><span class="spec-label">الأمان</span><span class="spec-value">HP Wolf Security + TPM 2.0</span></div>
+                    </div>
                 </div>
-                <div class="company-card">
-                    <h4>&#128222; ارقام الاتصال</h4>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#128100;</div>
-                        <div class="contact-details">
-                            <div class="contact-name">مينا</div>
-                            <div class="contact-number" dir="ltr">01208063327</div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">معرض الصور</h2>
+                <div class="gallery-grid">
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة اللابتوب مفتوح"><img src="Pict/24-Laptop-Full_Front_Open.jpg" alt="اللابتوب مفتوح" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوضع المفتوح بالكامل</div></button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/23-Laptop-Keyboard_Top.jpg" alt="لوحة المفاتيح" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">لوحة المفاتيح مع الإضاءة الخلفية</div></button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة الغطاء"><img src="Pict/26-Laptop-Top_Lid_Closed.jpg" alt="الغطاء" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الغطاء العلوي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/25-Laptop-Side_Closed.jpg" alt="الجانب" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب الجانبي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الزاوية"><img src="Pict/HP_Official/08-Product-Shot-Angle.jpg" alt="زاوية" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">زاوية عرض من HP</div></button>
+                    <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض صورة الجانب"><img src="Pict/HP_Official/09-Product-Shot-Side.jpg" alt="الجانب" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">عرض جانبي من HP</div></button>
+                    <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض صورة الظهر"><img src="Pict/HP_Official/10-Product-Shot-Back.jpg" alt="الخلف" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الظهر من HP</div></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section" id="video">
+            <div class="container">
+                <h2 class="section-title section-title--light">فيديو التعريف</h2>
+                <p class="video-subtitle">شاهد مراجعة شاملة للابتوب</p>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/mHkxw4p8xEU" title="HP ZBook Firefly 14 G11 Review" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-info" id="contact">
+            <div class="container">
+                <h2 class="section-title section-title--light">الراعي - بيانات التواصل</h2>
+                <p class="section-subtitle">شريكك الموثوق في خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
+                <div class="company-grid">
+                    <div class="company-card">
+                        <h4>&#128205; العنوان</h4>
+                        <p>اسيوط / ديروط / ابو جبل</p>
+                        <p>امام مستشفي الامين - الراعي</p>
+                    </div>
+                    <div class="company-card">
+                        <h4>&#128222; ارقام الاتصال</h4>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">مينا</div>
+                                <div class="contact-number" dir="ltr">01208063327</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">ابراهيم</div>
+                                <div class="contact-number" dir="ltr">01068857705</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">&#128100;</div>
-                        <div class="contact-details">
-                            <div class="contact-name">ابراهيم</div>
-                            <div class="contact-number" dir="ltr">01068857705</div>
+                    <div class="company-card">
+                        <h4>&#127760; تابعنا</h4>
+                        <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض والاخبار</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
+                        </div>
+                        <div class="cta-btn-row">
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="cta-btn-primary">&#128246; صفحة الشركه</a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="cta-btn-facebook">&#128295; صفحة الصيانه</a>
                         </div>
                     </div>
                 </div>
-                <div class="company-card">
-                    <h4>&#127760; تابعنا</h4>
-                    <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض والاخبار</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
-                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
-                    </div>
-                    <div style="margin-top:20px">
-                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s">&#128246; صفحة الشركه</a>
-                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--facebook);color:var(--text-light);padding:12px 25px;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:background .3s;margin-top:10px">&#128295; صفحة الصيانه</a>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -275,11 +290,11 @@
                 <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_QuickSpecs.pdf" target="_blank">المواصفات الرسمية</a>
                 <a href="Pict/HP_Official/HP_ZBook_Firefly_14_G11_Datasheet.pdf" target="_blank">ورقة البيانات</a>
             </div>
-            <div style="margin:20px 0;display:flex;align-items:center;justify-content:center;gap:10px">
-                <span style="color:rgba(255,255,255,.6)">عدد الزوار:</span>
-                <span id="finicount_views" style="background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center">...</span>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
             </div>
-            <p style="opacity:.6;font-size:.85rem;margin-top:10px">© 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
+            <p class="footer-copyright">© 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبة</p>
         </div>
     </footer>
 
@@ -361,6 +376,6 @@
             if (e.target === this) closeLightbox();
         });
     </script>
-    <script async src="//finicounter.eu.org/finicounter.js"></script>
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
 </body>
 </html>
