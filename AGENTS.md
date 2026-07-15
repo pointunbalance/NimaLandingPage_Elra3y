@@ -50,6 +50,11 @@ Each laptop page must include:
 - Use `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` for responsive layout
 - Each card should have proper spacing and padding
 
+### GPU Cards
+- Each graphics card (GPU) MUST have its own separate card
+- GPU cards must include full details: Model, Video Memory, Type, and any additional GPUs
+- If the laptop has multiple GPUs (e.g., dedicated + integrated), list each one in a separate card
+
 ## Store Page (laptops.html) Rules
 - Each product card must have:
   - Official product image
