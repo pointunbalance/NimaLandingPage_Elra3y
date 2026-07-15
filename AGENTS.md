@@ -42,6 +42,14 @@ Each laptop page must include:
 7. **Contact Section** - Company info, phone numbers, social links
 8. **Footer** - Copyright, navigation links
 
+## Design Rules
+
+### Spec Cards
+- Each spec card MUST appear separately on its own line
+- Cards should NOT overlap or be cut off
+- Use `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))` for responsive layout
+- Each card should have proper spacing and padding
+
 ## Store Page (laptops.html) Rules
 - Each product card must have:
   - Official product image
