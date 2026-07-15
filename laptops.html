@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
     <title>اللابتوبات - الراعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px}
-        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light)}
+        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        section[id]{scroll-margin-top:80px}
         header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
         .header-content{display:flex;justify-content:space-between;align-items:center}
         .logo{font-size:1.8rem;font-weight:800;color:var(--primary)}
         .logo span{color:var(--text-light)}
         nav ul{display:flex;list-style:none;gap:30px}
-        nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s;touch-action:manipulation}
         nav a:hover{color:var(--primary)}
         nav a.active{color:var(--primary);border-bottom:2px solid var(--primary);padding-bottom:2px}
         nav a:focus-visible,.product-card:focus-visible,.product-btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
@@ -39,7 +44,7 @@
 .product-desc{color:var(--text-muted);font-size:.95rem;margin-bottom:15px;line-height:1.7}
 .product-specs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
 .spec-tag{background:var(--bg-light);color:var(--text-muted);padding:6px 12px;border-radius:8px;font-size:.8rem}
-.product-btn{display:inline-block;background:var(--grad);color:white;padding:12px 30px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .3s;width:100%;text-align:center;margin-top:auto}
+.product-btn{display:inline-block;background:var(--grad);color:white;padding:12px 30px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .3s,box-shadow .3s,transform .3s;width:100%;text-align:center;margin-top:auto}
         .product-btn:hover{box-shadow:0 5px 20px rgba(0,150,214,.4)}
         .features-bar{background:var(--bg-dark);color:var(--text-light);padding:40px 0}
         .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
@@ -101,7 +106,7 @@
             <p class="section-subtitle">اختار اللابتوب المناسب لاحتياجاتك</p>
             <div class="products-grid">
                 <a href="HP-ZBook-Firefly-14-G11-Ultra7-16GB-256GB-RTX-A500/index.html" class="product-card">
-                    <img src="HP-ZBook-Firefly-14-G11-Ultra7-16GB-256GB-RTX-A500/Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="product-img">
+                    <img src="HP-ZBook-Firefly-14-G11-Ultra7-16GB-256GB-RTX-A500/Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
                     <div class="product-info">
                         <span class="product-badge">&#11088; متاح</span>
                         <h3 class="product-name">HP ZBook Firefly 14 G11</h3>
@@ -117,7 +122,7 @@
                     </div>
                 </a>
                 <a href="Dell-Latitude-E5570-i7-6600U-8GB-256GB/index.html" class="product-card">
-                    <img src="Dell-Latitude-E5570-i7-6600U-8GB-256GB/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="product-img">
+                    <img src="Dell-Latitude-E5570-i7-6600U-8GB-256GB/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
                     <div class="product-info">
                         <span class="product-badge" style="background:var(--primary)">&#11088; متاح</span>
                         <h3 class="product-name">Dell Latitude E5570</h3>
@@ -132,7 +137,7 @@
                     </div>
                 </a>
                 <a href="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/index.html" class="product-card">
-                    <img src="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520" class="product-img">
+                    <img src="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
                     <div class="product-info">
                         <span class="product-badge" style="background:var(--primary)">&#11088; متاح</span>
                         <h3 class="product-name">Dell Precision 7520</h3>

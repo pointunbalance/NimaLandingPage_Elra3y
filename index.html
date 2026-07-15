@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
     <title>الراعي - خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px}
-        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light)}
+        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        section[id]{scroll-margin-top:80px}
         header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
         .header-content{display:flex;justify-content:space-between;align-items:center}
         .logo{font-size:1.8rem;font-weight:800;color:var(--primary)}
         .logo span{color:var(--text-light)}
         nav ul{display:flex;list-style:none;gap:30px}
-        nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s;touch-action:manipulation}
         nav a:hover{color:var(--primary)}
         nav a.active{color:var(--primary);border-bottom:2px solid var(--primary);padding-bottom:2px}
         nav a:focus-visible,.hero-btn:focus-visible,.service-card:focus-visible,.social-link:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
@@ -29,7 +34,7 @@
         .hero h1{font-size:3rem;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.3)}
         .hero h1 span{color:var(--primary)}
         .hero-subtitle{font-size:1.3rem;opacity:.9;max-width:700px;margin:0 auto 40px}
-        .hero-btn{display:inline-block;background:var(--primary);color:white;padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:600;text-decoration:none;transition:all .3s;box-shadow:0 5px 20px rgba(0,150,214,.4)}
+        .hero-btn{display:inline-block;background:var(--primary);color:white;padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:600;text-decoration:none;transition:background .3s,box-shadow .3s,transform .3s;box-shadow:0 5px 20px rgba(0,150,214,.4)}
         .hero-btn:hover{background:var(--primary-dark);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,150,214,.5)}
         .services{padding:80px 0;background:var(--text-light)}
         .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:15px}
@@ -67,7 +72,7 @@
         .cta-box{background:var(--grad);padding:60px;border-radius:30px;color:white;box-shadow:0 20px 60px rgba(0,150,214,.3)}
         .cta-box h2{font-size:2rem;margin-bottom:15px}
         .cta-box p{font-size:1.1rem;opacity:.9;margin-bottom:30px}
-        .cta-btn{display:inline-block;background:white;color:var(--primary);padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:all .3s}
+        .cta-btn{display:inline-block;background:white;color:var(--primary);padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:700;text-decoration:none;transition:background .3s,color .3s}
         .cta-btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.2)}
         footer{background:var(--bg-dark);color:var(--text-light);padding:30px 0 20px;text-align:center}
         footer p{opacity:.6;font-size:.9rem}
@@ -189,8 +194,8 @@
                     <h4>&#127760; تابعنا</h4>
                     <p>تابعنا على صفحاتنا الرسميه للحصول على احدث العروض والاخبار</p>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه">&#102;</a>
-                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه">&#128295;</a>
+                        <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
+                        <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
                     </div>
                     <div style="margin-top:20px">
                         <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s">&#128246; صفحة الشركه</a>
