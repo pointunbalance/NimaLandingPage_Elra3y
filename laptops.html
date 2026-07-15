@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللابتوبات - الراعي</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
+        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light)}
+        header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.8rem;font-weight:800;color:var(--primary)}
+        .logo span{color:var(--text-light)}
+        nav ul{display:flex;list-style:none;gap:30px}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s}
+        nav a:hover{color:var(--primary)}
+        .hero{background:var(--grad-dark);color:var(--text-light);padding:60px 0;text-align:center}
+        .hero h1{font-size:2.5rem;margin-bottom:10px}
+        .hero p{font-size:1.1rem;opacity:.8}
+        .products{padding:60px 0}
+        .section-title{text-align:center;font-size:2rem;color:var(--secondary);margin-bottom:10px}
+        .section-subtitle{text-align:center;color:#666;margin-bottom:40px;font-size:1rem}
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+        .product-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.08);transition:transform .3s,box-shadow .3s;border:2px solid transparent;cursor:pointer;text-decoration:none;color:inherit;display:block}
+        .product-card:hover{transform:translateY(-10px);box-shadow:0 20px 60px rgba(0,0,0,.12);border-color:var(--primary)}
+        .product-img{width:100%;height:280px;object-fit:cover;background:#f0f0f0}
+        .product-info{padding:25px}
+        .product-badge{display:inline-block;background:var(--primary);color:white;padding:5px 15px;border-radius:20px;font-size:.8rem;font-weight:600;margin-bottom:15px}
+        .product-name{font-size:1.3rem;font-weight:700;color:var(--secondary);margin-bottom:10px}
+        .product-desc{color:#666;font-size:.95rem;margin-bottom:15px;line-height:1.7}
+        .product-specs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+        .spec-tag{background:var(--bg-light);color:#666;padding:6px 12px;border-radius:8px;font-size:.8rem}
+        .product-btn{display:inline-block;background:var(--grad);color:white;padding:12px 30px;border-radius:50px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all .3s;width:100%;text-align:center}
+        .product-btn:hover{box-shadow:0 5px 20px rgba(0,150,214,.4)}
+        .features-bar{background:var(--bg-dark);color:var(--text-light);padding:40px 0}
+        .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+        .feature-item{padding:20px}
+        .feature-icon{font-size:2rem;margin-bottom:10px}
+        .feature-text{font-size:.9rem;opacity:.8}
+        footer{background:var(--bg-dark);color:var(--text-light);padding:30px 0 20px;text-align:center}
+        footer p{opacity:.6;font-size:.9rem}
+        .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:15px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none;font-size:.9rem}
+        @media(max-width:768px){.hero h1{font-size:1.8rem}.header-content{flex-direction:column;gap:20px}nav ul{gap:15px;flex-wrap:wrap;justify-content:center}.features-grid{grid-template-columns:repeat(2,1fr)}.products-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">ال<span>راعي</span></div>
+            <nav><ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="laptops.html">اللابتوبات</a></li>
+                <li><a href="zbook.html">ZBook Firefly</a></li>
+                <li><a href="index.html#contact">التواصل</a></li>
+            </ul></nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>&#128187; اللابتوبات</h1>
+            <p>اكتشف تشكيله اللابتوبات المتاحه عندنا بافضل الاسعار والضمان</p>
+        </div>
+    </section>
+
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">&#128274;</div>
+                    <div class="feature-text">ضمان على كل المنتجات</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128176;</div>
+                    <div class="feature-text">افضل الاسعار</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128295;</div>
+                    <div class="feature-text">خدمه ما بعد البيع</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">&#128666;</div>
+                    <div class="feature-text">توصيل لحد الباب</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">المنتجات المتاحه</h2>
+            <p class="section-subtitle">اختار اللابتوب المناسب لاحتياجاتك</p>
+            <div class="products-grid">
+                <a href="zbook.html" class="product-card">
+                    <img src="Pict/HP_Official/07-Product-Shot-Front.jpg" alt="HP ZBook Firefly 14 G11" class="product-img">
+                    <div class="product-info">
+                        <span class="product-badge">&#11088; الأكثر مبيعاً</span>
+                        <h3 class="product-name">HP ZBook Firefly 14 G11</h3>
+                        <p class="product-desc">لابتوب احترافي فائق الاداء للمحترفين معالج Intel Core Ultra 7 وكرت شاشة NVIDIA RTX A500</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">Intel Core Ultra 7</span>
+                            <span class="spec-tag">RTX A500 4GB</span>
+                            <span class="spec-tag">16GB DDR5</span>
+                            <span class="spec-tag">256GB NVMe</span>
+                            <span class="spec-tag">NPU AI</span>
+                        </div>
+                        <span class="product-btn">شوف التفاصيل &#8592;</span>
+                    </div>
+                </a>
+                <div class="product-card" style="opacity:.6;pointer-events:none">
+                    <div style="width:100%;height:280px;background:linear-gradient(135deg,#e0e0e0,#f5f5f5);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
+                    <div class="product-info">
+                        <span class="product-badge" style="background:#999">قريباً</span>
+                        <h3 class="product-name">منتجات جديده قريباً</h3>
+                        <p class="product-desc">في انتظاركم منتجات جديده باسعار مميزة - تابعونا</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">قريباً</span>
+                        </div>
+                        <span class="product-btn" style="background:#999;cursor:not-allowed">قريباً</span>
+                    </div>
+                </div>
+                <div class="product-card" style="opacity:.6;pointer-events:none">
+                    <div style="width:100%;height:280px;background:linear-gradient(135deg,#e0e0e0,#f5f5f5);display:flex;align-items:center;justify-content:center;font-size:4rem">&#128187;</div>
+                    <div class="product-info">
+                        <span class="product-badge" style="background:#999">قريباً</span>
+                        <h3 class="product-name">منتجات جديده قريباً</h3>
+                        <p class="product-desc">في انتظاركم منتجات جديده باسعار مميزة - تابعونا</p>
+                        <div class="product-specs">
+                            <span class="spec-tag">قريباً</span>
+                        </div>
+                        <span class="product-btn" style="background:#999;cursor:not-allowed">قريباً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="laptops.html">اللابتوبات</a>
+                <a href="zbook.html">ZBook Firefly</a>
+                <a href="index.html#contact">التواصل</a>
+            </div>
+            <p>&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+        </div>
+    </footer>
+</body>
+</html>
