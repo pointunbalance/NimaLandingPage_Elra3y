@@ -7,12 +7,13 @@
     <title>الراعي - خدمات الكمبيوتر واللابتوب وكاميرات المراقبة</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px}
-        body{font-family:"Noto Kufi Arabic",sans-serif;line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px;--font-display:"Cairo",sans-serif;--font-body:"Noto Kufi Arabic",sans-serif}
+        body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        h1,h2,h3{font-family:var(--font-display)}
         section[id]{scroll-margin-top:80px}
         header{background:var(--bg-dark);color:var(--text-light);padding:20px 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 20px rgba(0,0,0,.3)}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
@@ -36,24 +37,24 @@
         .hero-subtitle{font-size:1.3rem;opacity:.9;max-width:700px;margin:0 auto 40px}
         .hero-btn{display:inline-block;background:var(--primary);color:white;padding:15px 40px;border-radius:50px;font-size:1.1rem;font-weight:600;text-decoration:none;transition:background .3s,box-shadow .3s,transform .3s;box-shadow:0 5px 20px rgba(0,150,214,.4)}
         .hero-btn:hover{background:var(--primary-dark);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,150,214,.5)}
-        .services{padding:80px 0;background:var(--text-light)}
+        .services{padding:60px 0;background:var(--text-light)}
         .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:15px}
         .section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:50px;font-size:1.1rem}
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-        .service-card{background:var(--bg-light);padding:40px 30px;border-radius:20px;text-align:center;transition:transform .3s,box-shadow .3s;border:2px solid transparent}
-        .service-card:hover{transform:translateY(-10px);box-shadow:0 20px 50px rgba(0,0,0,.1);border-color:var(--primary)}
+        .service-card{background:var(--bg-light);padding:40px 30px;border-radius:20px;text-align:center;transition:box-shadow .3s,border-color .3s;border:2px solid transparent}
+        .service-card:hover{box-shadow:0 20px 50px rgba(0,0,0,.1);border-color:var(--primary)}
         .service-icon{width:80px;height:80px;background:var(--grad);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 25px;font-size:2.5rem}
         .service-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
         .service-card p{color:var(--text-muted);line-height:1.8}
         .about{padding:80px 0;background:var(--bg-light)}
-        .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:40px;align-items:center}
-        .about-content h2{font-size:2rem;color:var(--secondary);margin-bottom:20px}
-        .about-content p{color:var(--text-muted);line-height:2;margin-bottom:15px}
+        .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+        .about-content h2{font-size:2.2rem;color:var(--secondary);margin-bottom:20px;text-align:right}
+        .about-content p{color:var(--text-muted);line-height:2;margin-bottom:15px;text-align:right}
         .about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
         .stat-box{text-align:center;padding:20px;background:var(--bg-light);border-radius:15px}
         .stat-number{font-size:2rem;font-weight:800;color:var(--primary)}
         .stat-label{color:var(--text-muted);font-size:.9rem;margin-top:5px}
-        .contact{padding:80px 0;background:var(--grad-dark);color:var(--text-light)}
+        .contact{padding:100px 0;background:var(--grad-dark);color:var(--text-light)}
         .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
         .contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:20px;transition:transform .3s,border-color .3s}
         .contact-card:hover{transform:translateY(-5px);border-color:var(--primary)}
