@@ -67,6 +67,8 @@ Each laptop page must include:
   - Description
   - Spec tags (CPU, GPU, RAM, Storage)
   - "شوف التفاصيل" button linking to product page
+- All product cards must have consistent height
+- The "شوف التفاصيل" button must be at the same level in all cards (aligned to bottom)
 
 ## Technical Requirements
 - Google Fonts: Noto Kufi Arabic
