@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="-webkit-tap-highlight-color:transparent">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>HP ProBook 650 G3 - لابتوب احترافي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" as="style">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap");
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --primary:#0096D6;
+            --primary-dark:#0073A7;
+            --secondary:#333;
+            --bg-light:#f8f9fa;
+            --bg-dark:#1a1a2e;
+            --text-light:#fff;
+            --text-dark:#333;
+            --text-muted:#666;
+            --border:#eee;
+            --facebook:#4267B2;
+            --grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);
+            --grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);
+            --z-overlay:1000;
+            --radius:12px;
+            --radius-lg:20px;
+            --font-display:"Cairo",sans-serif;
+            --font-body:"Noto Kufi Arabic",sans-serif
+        }
+        body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain}
+        h1,h2,h3{font-family:var(--font-display);text-wrap:balance}
+        section[id]{scroll-margin-top:80px}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+        /* Skip Link */
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
+
+        /* Header */
+        header{padding:20px 0;position:sticky;top:0;z-index:var(--z-overlay)}
+        .header-content{display:flex;justify-content:space-between;align-items:center}
+        .logo{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--primary);background:var(--bg-dark);padding:10px 20px;border-radius:var(--radius)}
+        nav{background:var(--bg-dark);border-radius:50px;padding:8px 30px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+        nav ul{display:flex;list-style:none;gap:20px;align-items:center}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;padding:8px 16px;border-radius:50px;transition:background .3s,color .3s;touch-action:manipulation}
+        nav a:hover{background:rgba(255,255,255,.1);color:var(--primary)}
+        nav a.active{background:var(--primary);color:var(--text-light)}
+        nav a:focus-visible,.social-link:focus-visible,.lightbox-close:focus-visible,.lightbox-nav:focus-visible,.footer-links a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+        nav a:active{transition-duration:.1s}
+
+        /* Hero Section */
+        .hero{background:var(--grad);color:var(--text-light);padding:80px 0;text-align:center}
+        .hero h1,.section-title{overflow-wrap:anywhere;min-width:0}
+        .hero h1{font-size:2.8rem;margin-bottom:20px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+        .hero-subtitle{font-size:1.3rem;opacity:.95;max-width:800px;margin:0 auto 30px}
+        .hero-image{max-width:600px;height:auto;border-radius:15px;box-shadow:0 20px 60px rgba(0,0,0,.3);margin-top:40px}
+
+        /* Section Title */
+        .section-title{text-align:center;font-size:2.2rem;color:var(--secondary);margin-bottom:50px}
+        .section-title--light{color:var(--text-light)}
+        .section-subtitle{text-align:center;opacity:.8;max-width:700px;margin:0 auto;font-size:1.1rem}
+
+        /* Features Section */
+        .features{padding:80px 0;background:var(--text-light)}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+        .feature-card{background:var(--bg-light);padding:30px;border-radius:15px;text-align:center;transition:transform .3s,box-shadow .3s}
+        .feature-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.1)}
+        .feature-icon{font-size:3rem;margin-bottom:20px}
+        .feature-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
+        .feature-card p{color:var(--text-muted);font-size:.95rem}
+
+        /* Specs Section */
+        .specs{padding:80px 0;background:var(--bg-light)}
+        .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+        .spec-card{background:var(--text-light);padding:25px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+        .spec-card h4{color:var(--primary);margin-bottom:15px;font-size:1.2rem;border-bottom:2px solid var(--primary);padding-bottom:10px}
+        .spec-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+        .spec-item:last-child{border-bottom:none}
+        .spec-label{color:var(--text-muted)}
+        .spec-value{font-weight:600;color:var(--secondary);font-variant-numeric:tabular-nums}
+
+        /* Gallery Section */
+        .gallery{padding:80px 0;background:var(--text-light)}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer;border:none;background:none;padding:0;font:inherit}
+        .gallery-item img{width:100%;height:200px;object-fit:cover;transition:transform .3s;transform-origin:center}
+        .gallery-item:hover img{transform:scale(1.1)}
+        .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);color:white;padding:10px;font-size:.9rem}
+        .gallery-item .zoom-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,150,214,.85);color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:0;transition:opacity .3s;pointer-events:none}
+        .gallery-item:hover .zoom-icon{opacity:1}
+
+        /* Lightbox */
+        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:var(--z-overlay);justify-content:center;align-items:center;flex-direction:column;overscroll-behavior:contain}
+        .lightbox.active{display:flex}
+        .lightbox-img{max-width:90%;max-height:80vh;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,.5);object-fit:contain;transition:opacity .3s}
+        .lightbox-caption{color:white;margin-top:15px;font-size:1.1rem;text-align:center}
+        .lightbox-close{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.15);color:white;border:none;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:background .3s;z-index:10}
+        .lightbox-close:hover{background:rgba(255,255,255,.3)}
+        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:white;border:none;font-size:2.5rem;width:60px;height:60px;border-radius:50%;cursor:pointer;transition:background .3s}
+        .lightbox-nav:hover{background:rgba(255,255,255,.3)}
+        .lightbox-prev{right:20px}
+        .lightbox-next{left:20px}
+        .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
+
+        /* Video Section */
+        .video-section{padding:80px 0;background:var(--bg-dark);color:var(--text-light);text-align:center}
+        .video-subtitle{margin-bottom:30px;font-size:1.1rem;opacity:.9}
+        .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+        .video-wrapper iframe{width:100%;height:450px;border:none}
+
+        /* Company Info Section */
+        .company-info{padding:80px 0;background:var(--grad-dark);color:var(--text-light)}
+        .company-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+        .company-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:15px;transition:transform .3s,border-color .3s}
+        .company-card:hover{transform:translateY(-5px);border-color:var(--primary)}
+        .company-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+        .company-card p{line-height:2;color:rgba(255,255,255,.85)}
+        .company-card a{color:var(--primary);text-decoration:none;transition:color .3s}
+        .company-card a:hover{color:var(--primary);text-decoration:underline}
+        .contact-item{display:flex;align-items:center;gap:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+        .contact-item:last-child{border-bottom:none}
+        .contact-icon{width:45px;height:45px;background:rgba(0,150,214,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+        .contact-details{flex:1}
+        .contact-name{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:2px}
+        .contact-number{font-size:1.1rem;font-weight:600;direction:ltr;text-align:right}
+        .social-links{display:flex;gap:15px;margin-top:20px}
+        .social-link{width:50px;height:50px;background:rgba(0,150,214,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:background .3s,transform .3s;text-decoration:none}
+        .social-link:hover{background:var(--primary);transform:translateY(-3px)}
+
+        /* CTA Buttons */
+        .cta-btn-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
+        .cta-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:white;padding:12px 25px;border-radius:10px;font-weight:600;text-decoration:none;transition:background .3s}
+        .cta-btn-primary:hover{background:var(--primary-dark)}
+        .cta-btn-facebook{display:inline-flex;align-items:center;gap:8px;background:var(--facebook);color:var(--text-light);padding:12px 25px;border-radius:var(--radius);font-weight:600;text-decoration:none;transition:background .3s}
+
+        /* Footer */
+        footer{background:var(--bg-dark);color:var(--text-light);padding:40px 0 20px;text-align:center}
+        .footer-links{display:flex;justify-content:center;gap:30px;margin-bottom:30px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none}
+        .footer-links a:hover{text-decoration:underline}
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6)}
+        .footer-counter-value{background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:.85rem;margin-top:10px}
+
+        /* Responsive */
+        @media(max-width:768px){
+            .hero h1{font-size:2rem}
+            .header-content{flex-direction:column;gap:20px}
+            nav ul{gap:15px;flex-wrap:wrap;justify-content:center}
+            .hero-image{max-width:100%}
+        }
+
+        /* Accessibility */
+        @media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important;animation:none!important}}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">HP ProBook 650</div>
+            <nav aria-label="القائمة الرئيسية"><ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../laptops.html" class="active">اللابتوبات</a></li>
+                <li><a href="#specs">المواصفات</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul></nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 translate="no">HP ProBook 650 G3</h1>
+                <p class="hero-subtitle">لابتوب HP ProBook 650 G3 - اداء موثوق للمحترفين</p>
+                <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP ProBook 650 G3" class="hero-image" width="600" height="400" fetchpriority="high">
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">مميزات الحاسوب</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
+                        <h3>معالج فائق الأداء</h3>
+                        <p>Intel Core i7-7600U بـ 2 انوية و4 خيوط معالجة</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#127918;</div>
+                        <h3>كرت شاشة منفصل</h3>
+                        <p>AMD Radeon R7 M350 بذاكرة 2GB GDDR5 للرسوميات</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128190;</div>
+                        <h3>تخزين فائق السرعة</h3>
+                        <p>SSD 256GB NVMe للسرعة الفائقه في التشغيل والاقلاع</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <h3>ذاكرة واسعة</h3>
+                        <p>8GB DDR4 مع إمكانية الترقية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specs Section -->
+        <section class="specs" id="specs">
+            <div class="container">
+                <h2 class="section-title">المواصفات الفنية</h2>
+                <div class="specs-grid">
+                    <!-- CPU Spec Card -->
+                    <div class="spec-card">
+                        <h4>&#128187; المعالج</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">الموديل</span>
+                            <span class="spec-value">Intel Core i7-7600U</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">النواة</span>
+                            <span class="spec-value">2 انوية / 4 خيوط</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">السرعة</span>
+                            <span class="spec-value">2.8GHz - 3.9GHz</span>
+                        </div>
+                    </div>
+                    <!-- GPU Spec Card - Integrated -->
+                    <div class="spec-card">
+                        <h4>&#127918; كرت الشاشه المدمج</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">الموديل</span>
+                            <span class="spec-value">Intel HD Graphics 620</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">النوع</span>
+                            <span class="spec-value">مدمج</span>
+                        </div>
+                    </div>
+                    <!-- GPU Spec Card - Dedicated -->
+                    <div class="spec-card">
+                        <h4>&#127918; كرت الشاشه المنفصل</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">الموديل</span>
+                            <span class="spec-value">AMD Radeon R7 M350</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">النوع</span>
+                            <span class="spec-value">منفصل</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">ذاكرة الفيديو</span>
+                            <span class="spec-value">2GB GDDR5</span>
+                        </div>
+                    </div>
+                    <!-- Storage -->
+                    <div class="spec-card">
+                        <h4>&#128190; التخزين</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">السعة</span>
+                            <span class="spec-value">256GB</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">النوع</span>
+                            <span class="spec-value">SSD NVMe</span>
+                        </div>
+                    </div>
+                    <!-- RAM -->
+                    <div class="spec-card">
+                        <h4>&#9889; الذاكره</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">السعة</span>
+                            <span class="spec-value">8GB DDR4</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">النوع</span>
+                            <span class="spec-value">DDR4</span>
+                        </div>
+                    </div>
+                    <!-- Battery -->
+                    <div class="spec-card">
+                        <h4>&#128267; البطاريه</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">السعة</span>
+                            <span class="spec-value">37620mwh</span>
+                        </div>
+                    </div>
+                    <!-- Display -->
+                    <div class="spec-card">
+                        <h4>&#128424; الشاشه</h4>
+                        <div class="spec-item">
+                            <span class="spec-label">الحجم</span>
+                            <span class="spec-value">15.6 انش</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">الدقة</span>
+                            <span class="spec-value">Full HD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">معرض الصور</h2>
+                <div class="gallery-grid">
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض الصورة 1">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP ProBook 650 G3 - من الامام" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">المنظر الأمامي</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض الصورة 2">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/02-Product-Angle-View.jpg" alt="HP ProBook 650 G3 - من الزاوية" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">من الزاوية</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض الصورة 3">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/03-Product-Back-View.jpg" alt="HP ProBook 650 G3 - من الخلف" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">المنظر الخلفي</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض الصورة 4">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/04-Keyboard-View.jpg" alt="HP ProBook 650 G3 - لوحة المفاتيح" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">لوحة المفاتيح</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض الصورة 5">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/05-Side-View.jpg" alt="HP ProBook 650 G3 - من الجانب" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">من الجانب</div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-section" id="video">
+            <div class="container">
+                <h2 class="section-title section-title--light">فيديو التعريف</h2>
+                <p class="video-subtitle">شاهد مراجعة شاملة للابتوب</p>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/7N0urvsB2HQ" title="HP ProBook 650 G3 Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info Section -->
+        <section class="company-info" id="contact">
+            <div class="container">
+                <h2 class="section-title section-title--light">الراعي - بيانات التواصل</h2>
+                <div class="company-grid">
+                    <div class="company-card">
+                        <h4>&#128205; العنوان</h4>
+                        <p>اسيوط / ديروط / ابو جبل / امام مستشفي الامين</p>
+                    </div>
+                    <div class="company-card">
+                        <h4>&#128222; التليفون</h4>
+                        <p>مينا: 01208063327</p>
+                        <p>ابراهيم: 01068857705</p>
+                    </div>
+                    <div class="company-card">
+                        <h4>&#127760; تابعنا</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">الرئيسية</a>
+                <a href="../laptops.html">اللابتوبات</a>
+                <a href="../index.html#contact">التواصل</a>
+            </div>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
+            </div>
+            <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق">&#10095;</button>
+        <img src="" alt="Gallery Image" class="lightbox-img" id="lightbox-img">
+        <p class="lightbox-caption" id="lightbox-caption"></p>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي">&#10094;</button>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
+    <script>
+        // Lightbox Functions
+        let currentImageIndex = 0;
+        const galleryImages = [
+            '../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/01-Product-Front-View.jpg',
+            '../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/02-Product-Angle-View.jpg',
+            '../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/03-Product-Back-View.jpg',
+            '../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/04-Keyboard-View.jpg',
+            '../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/05-Side-View.jpg'
+        ];
+        const galleryCaptions = [
+            'المنظر الأمامي',
+            'من الزاوية',
+            'المنظر الخلفي',
+            'لوحة المفاتيح',
+            'من الجانب'
+        ];
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+
+        function openLightbox(index) {
+            currentImageIndex = index;
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+                lightboxImg.src = galleryImages[index];
+                lightboxCaption.textContent = galleryCaptions[index] || '';
+                lightboxCounter.textContent = `${index + 1} / ${galleryImages.length}`;
+                lightboxImg.style.opacity = 1;
+            }, 100);
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('lightbox-close').focus();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+            lightboxImg.style.opacity = 0;
+            setTimeout(() => {
+                lightboxImg.src = galleryImages[currentImageIndex];
+                lightboxCaption.textContent = galleryCaptions[currentImageIndex] || '';
+                lightboxCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+                lightboxImg.style.opacity = 1;
+            }, 100);
+        }
+
+        // Keyboard Navigation
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') navigateLightbox(-1);
+            if (e.key === 'ArrowLeft') navigateLightbox(1);
+
+            // Focus Trap
+            if (e.key === 'Tab') {
+                const focusableElements = lightbox.querySelectorAll('button');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (e.shiftKey) {
+                    if (document.activeElement === firstElement) {
+                        e.preventDefault();
+                        lastElement.focus();
+                    }
+                } else {
+                    if (document.activeElement === lastElement) {
+                        e.preventDefault();
+                        firstElement.focus();
+                    }
+                }
+            }
+        });
+
+        // Click outside to close
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+    </script>
+</body>
+</html>
