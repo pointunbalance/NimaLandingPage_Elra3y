@@ -299,11 +299,30 @@
             <div class="container">
                 <h2 class="section-title">معرض الصور</h2>
                 <div class="gallery-grid">
-                    <!-- Add gallery items here -->
                     <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض الصورة 1">
                         <img src="Pict/HP_Official/01-Product-Front-View.jpg" alt="HP ProBook 650 G3 - من الامام" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">المنظر الأمامي</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض الصورة 2">
+                        <img src="Pict/HP_Official/02-Product-Angle-View.jpg" alt="HP ProBook 650 G3 - من الزاوية" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">من الزاوية</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض الصورة 3">
+                        <img src="Pict/HP_Official/03-Product-Back-View.jpg" alt="HP ProBook 650 G3 - من الخلف" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">المنظر الخلفي</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض الصورة 4">
+                        <img src="Pict/HP_Official/04-Keyboard-View.jpg" alt="HP ProBook 650 G3 - لوحة المفاتيح" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">لوحة المفاتيح</div>
+                    </button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض الصورة 5">
+                        <img src="Pict/HP_Official/05-Side-View.jpg" alt="HP ProBook 650 G3 - من الجانب" loading="lazy">
+                        <div class="zoom-icon" aria-hidden="true">&#128269;</div>
+                        <div class="gallery-caption">من الجانب</div>
                     </button>
                 </div>
             </div>
@@ -376,8 +395,20 @@
     <script>
         // Lightbox Functions
         let currentImageIndex = 0;
-        const galleryImages = [];
-        const galleryCaptions = [];
+        const galleryImages = [
+            'Pict/HP_Official/01-Product-Front-View.jpg',
+            'Pict/HP_Official/02-Product-Angle-View.jpg',
+            'Pict/HP_Official/03-Product-Back-View.jpg',
+            'Pict/HP_Official/04-Keyboard-View.jpg',
+            'Pict/HP_Official/05-Side-View.jpg'
+        ];
+        const galleryCaptions = [
+            'المنظر الأمامي',
+            'من الزاوية',
+            'المنظر الخلفي',
+            'لوحة المفاتيح',
+            'من الجانب'
+        ];
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
