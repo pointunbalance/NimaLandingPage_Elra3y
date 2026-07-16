@@ -229,30 +229,30 @@
             <div class="container">
                 <h2 class="section-title">معرض الصور</h2>
                 <div class="gallery-grid">
-                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض الصورة 1">
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي">
                         <img src="Pict/Fujitsu_Official/01-Product-Front-View.jpg" alt="Fujitsu Lifebook E5410 - من الامام" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
-                        <div class="gallery-caption">المنظر الأمامي</div>
+                        <div class="gallery-caption">المنظر الامامي</div>
                     </button>
-                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض الصورة 2">
-                        <img src="Pict/Fujitsu_Official/02-Product-Angle-View.jpg" alt="Fujitsu Lifebook E5410 - من الزاوية" loading="lazy">
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه">
+                        <img src="Pict/Fujitsu_Official/02-Product-Angle-View.jpg" alt="Fujitsu Lifebook E5410 - من الزاويه" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
-                        <div class="gallery-caption">من الزاوية</div>
+                        <div class="gallery-caption">من الزاويه</div>
                     </button>
-                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض الصورة 3">
-                        <img src="Pict/Fujitsu_Official/03-Product-Back-View.jpg" alt="Fujitsu Lifebook E5410 - من الخلف" loading="lazy">
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة الجانب">
+                        <img src="Pict/Fujitsu_Official/03-Product-Side-View.jpg" alt="Fujitsu Lifebook E5410 - من الجانب" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
-                        <div class="gallery-caption">المنظر الخلفي</div>
+                        <div class="gallery-caption">من الجانب</div>
                     </button>
-                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض الصورة 4">
-                        <img src="Pict/Fujitsu_Official/04-Keyboard-View.jpg" alt="Fujitsu Lifebook E5410 - لوحة المفاتيح" loading="lazy">
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة لوحة المفاتيح">
+                        <img src="Pict/Fujitsu_Official/04-Product-Keyboard.jpg" alt="Fujitsu Lifebook E5410 - لوحة المفاتيح" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">لوحة المفاتيح</div>
                     </button>
-                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض الصورة 5">
-                        <img src="Pict/Fujitsu_Official/05-Side-View.jpg" alt="Fujitsu Lifebook E5410 - من الجانب" loading="lazy">
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر">
+                        <img src="Pict/Fujitsu_Official/05-Product-Back-View.jpg" alt="Fujitsu Lifebook E5410 - من الخلف" loading="lazy">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
-                        <div class="gallery-caption">من الجانب</div>
+                        <div class="gallery-caption">المنظر الخلفي</div>
                     </button>
                 </div>
             </div>
@@ -324,16 +324,16 @@
         const galleryImages = [
             'Pict/Fujitsu_Official/01-Product-Front-View.jpg',
             'Pict/Fujitsu_Official/02-Product-Angle-View.jpg',
-            'Pict/Fujitsu_Official/03-Product-Back-View.jpg',
-            'Pict/Fujitsu_Official/04-Keyboard-View.jpg',
-            'Pict/Fujitsu_Official/05-Side-View.jpg'
+            'Pict/Fujitsu_Official/03-Product-Side-View.jpg',
+            'Pict/Fujitsu_Official/04-Product-Keyboard.jpg',
+            'Pict/Fujitsu_Official/05-Product-Back-View.jpg'
         ];
         const galleryCaptions = [
-            'المنظر الأمامي',
-            'من الزاوية',
-            'المنظر الخلفي',
+            'المنظر الامامي',
+            'من الزاويه',
+            'من الجانب',
             'لوحة المفاتيح',
-            'من الجانب'
+            'المنظر الخلفي'
         ];
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
