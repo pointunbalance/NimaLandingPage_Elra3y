@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="-webkit-tap-highlight-color:transparent">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Dell Latitude 5411 - لابتوب احترافي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
+        *{margin:0;padding:0;box-sizing:border-box}
+        html,body{overflow-x:clip}
+        :root{--primary:#0076CE;--primary-dark:#005AA1;--secondary:#333;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--border:#eee;--grad:linear-gradient(135deg,#0076CE 0%,#00A3E0 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px;--font-display:"Cairo",sans-serif;--font-body:"Noto Kufi Arabic",sans-serif}
+        body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom)}
+        h1,h2,h3{font-family:var(--font-display);text-wrap:balance}
+        section[id]{scroll-margin-top:80px}
+        header{padding:20px 0;position:sticky;top:0;z-index:var(--z-overlay)}
+        .container{max-width:1200px;margin:0 auto;padding:0 15px}
+        @media(min-width:40rem){.container{padding:0 20px}}
+        .header-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;gap:12px}
+        .logo{font-family:var(--font-display);font-size:clamp(1.3rem,4vw,1.8rem);font-weight:900;color:var(--primary);background:var(--bg-dark);padding:clamp(8px,2vw,10px) clamp(12px,3vw,20px);border-radius:var(--radius)}
+        nav{background:var(--bg-dark);border-radius:50px;padding:8px 30px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+        nav ul{display:flex;list-style:none;gap:20px;align-items:center}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;padding:8px 16px;border-radius:50px;transition:background .3s,color .3s;touch-action:manipulation}
+        nav a:hover{background:rgba(255,255,255,.1);color:var(--primary)}
+        nav a.active{background:var(--primary);color:var(--text-light)}
+        nav a:focus-visible,.social-link:focus-visible,.lightbox-close:focus-visible,.lightbox-nav:focus-visible,.footer-links a:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+        nav a:active{transition-duration:.1s}
+        .nav-toggle{display:none;background:var(--bg-dark);color:var(--text-light);border:none;font-size:1.5rem;padding:6px;border-radius:var(--radius);cursor:pointer;line-height:1}
+        .hero h1,.section-title{overflow-wrap:anywhere;min-width:0}
+        @media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important;animation:none!important}}
+        .hero{background:var(--grad);color:var(--text-light);padding:clamp(50px,10vw,80px) 0;text-align:center}
+        .hero h1{font-size:clamp(1.6rem,4.5vw,2.8rem);margin-bottom:15px;text-shadow:2px 2px 4px rgba(0,0,0,.2)}
+        .hero-subtitle{font-size:1.2rem;opacity:.95;max-width:800px;margin:0 auto 30px}
+        .hero-image{max-width:500px;height:auto;border-radius:15px;box-shadow:0 20px 60px rgba(0,0,0,.3);margin-top:30px}
+        .features{padding:clamp(30px,6vw,80px) 0;background:var(--text-light)}
+        .section-title{text-align:center;font-size:clamp(1.4rem,3.5vw,2.2rem);color:var(--secondary);margin-bottom:50px}
+        .section-title--light{color:var(--text-light)}
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+        .feature-card{background:var(--bg-light);padding:30px;border-radius:15px;text-align:center;transition:transform .3s,box-shadow .3s}
+        .feature-card:hover{transform:translateY(-10px);box-shadow:0 15px 40px rgba(0,0,0,.1)}
+        .feature-icon{font-size:3rem;margin-bottom:20px}
+        .feature-card h3{color:var(--primary);margin-bottom:15px;font-size:1.3rem}
+        .specs{padding:clamp(30px,6vw,80px) 0;background:var(--bg-light)}
+        .specs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+        .spec-card{background:var(--text-light);padding:25px;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+        .spec-card h4{color:var(--primary);margin-bottom:15px;font-size:1.2rem;border-bottom:2px solid var(--primary);padding-bottom:10px}
+        .spec-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--border)}
+        .spec-item:last-child{border-bottom:none}
+        .spec-label{color:var(--text-muted)}
+        .spec-value{font-weight:600;color:var(--secondary);font-variant-numeric:tabular-nums;text-align:right}
+        .gallery{padding:clamp(30px,6vw,80px) 0;background:var(--text-light)}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+        .gallery-item{position:relative;overflow:hidden;border-radius:10px;box-shadow:0 5px 20px rgba(0,0,0,.1);cursor:pointer;border:none;background:none;padding:0;font:inherit}
+        .gallery-item img{width:100%;height:clamp(120px,25vw,200px);object-fit:cover;transition:transform .3s;transform-origin:center}
+        .gallery-item:hover img{transform:scale(1.1)}
+        .gallery-caption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.8);color:white;padding:10px;font-size:.9rem}
+        .gallery-item .zoom-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,118,206,.85);color:white;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;opacity:0;transition:opacity .3s;pointer-events:none}
+        .gallery-item:hover .zoom-icon{opacity:1}
+        .company-info{padding:clamp(30px,6vw,80px) 0;background:var(--grad-dark);color:var(--text-light)}
+        .company-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:40px}
+        .company-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:15px;transition:transform .3s,border-color .3s}
+        .company-card:hover{transform:translateY(-5px);border-color:var(--primary)}
+        .company-card h4{color:var(--primary);margin-bottom:20px;font-size:1.3rem;display:flex;align-items:center;gap:10px}
+        .company-card p{line-height:2;color:rgba(255,255,255,.85)}
+        .contact-item{display:flex;align-items:center;gap:15px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+        .contact-item:last-child{border-bottom:none}
+        .contact-icon{width:45px;height:45px;background:rgba(0,118,206,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+        .contact-details{flex:1}
+        .contact-name{font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:2px}
+        .contact-number{font-size:1.1rem;font-weight:600;direction:ltr;text-align:right}
+        .social-links{display:flex;gap:15px;margin-top:20px}
+        .social-link{width:50px;height:50px;background:rgba(0,118,206,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;transition:background .3s,transform .3s;text-decoration:none;color:white}
+        .social-link:hover{background:var(--primary);transform:translateY(-3px)}
+        footer{background:var(--bg-dark);color:var(--text-light);padding:30px 0 20px;text-align:center}
+        .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:15px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none;font-size:clamp(.8rem,2vw,.9rem)}
+        footer p{opacity:.6;font-size:clamp(.8rem,2vw,.9rem);margin-top:10px}
+        .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:var(--z-overlay);justify-content:center;align-items:center;flex-direction:column;overscroll-behavior:contain}
+        .lightbox.active{display:flex}
+        .lightbox-img{max-width:90%;max-height:80vh;border-radius:8px;box-shadow:0 10px 50px rgba(0,0,0,.5);object-fit:contain;transition:opacity .3s}
+        .lightbox-caption{color:white;margin-top:15px;font-size:1.1rem;text-align:center}
+        .lightbox-close{position:absolute;top:20px;left:20px;background:rgba(255,255,255,.15);color:white;border:none;font-size:2rem;width:50px;height:50px;border-radius:50%;cursor:pointer;transition:background .3s;z-index:10}
+        .lightbox-close:hover{background:rgba(255,255,255,.3)}
+        .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);color:white;border:none;font-size:2.5rem;width:60px;height:60px;border-radius:50%;cursor:pointer;transition:background .3s}
+        .lightbox-nav:hover{background:rgba(255,255,255,.3)}
+        .lightbox-prev{right:20px}
+        .lightbox-next{left:20px}
+        .lightbox-counter{color:rgba(255,255,255,.7);position:absolute;bottom:20px;font-size:.9rem}
+        @media(max-width:768px){
+            .header-content{flex-direction:row;gap:8px;padding:0}
+            .nav-toggle{display:block}
+            nav{width:100%;border-radius:16px;padding:8px 12px}
+            nav ul{display:none;flex-direction:column;gap:10px;padding:10px 0}
+            nav.open ul{display:flex}
+            nav a{display:block;text-align:center;padding:10px 16px}
+            .hero{padding:30px 0}
+            .hero h1{font-size:clamp(1.3rem,6vw,1.8rem)}
+            .hero-subtitle{font-size:1rem;padding:0 15px;margin-bottom:20px}
+            .hero-image{margin-top:20px}
+            .features{padding:30px 0}
+            .features-grid{grid-template-columns:1fr;gap:15px}
+            .feature-card{padding:20px}
+            .feature-icon{font-size:2rem}
+            .specs{padding:30px 0}
+            .specs-grid{grid-template-columns:1fr;gap:12px}
+            .spec-card{padding:15px}
+            .gallery{padding:30px 0}
+            .gallery-grid{grid-template-columns:1fr;gap:12px}
+            .gallery-item img{height:220px}
+            .video-section{padding:30px 0}
+            .video-wrapper iframe{height:250px}
+            .company-info{padding:30px 0}
+            .company-grid{gap:15px}
+            .company-card{padding:20px}
+            footer{padding:20px 0}
+            .footer-links{gap:10px;margin-bottom:10px}
+            .footer-links a{font-size:.8rem}
+            .footer-counter{margin:15px 0}
+            .social-link{min-width:44px;min-height:44px}
+            .lightbox-nav{width:40px;height:40px;font-size:1.8rem}
+        }
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6)}
+        .footer-counter-value{background:var(--primary);color:white;padding:8px 20px;border-radius:8px;font-weight:700;font-size:1.1rem;min-width:60px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:.85rem;margin-top:10px}
+        .video-section{background:var(--bg-light);padding:clamp(30px,6vw,80px) 0}
+        .video-wrapper{max-width:800px;margin:0 auto;border-radius:15px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.15)}
+        .video-wrapper iframe{display:block}
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Dell Latitude</div>
+            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة"><span aria-hidden="true">&#9776;</span></button>
+            <nav aria-label="القائمة الرئيسية"><ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../laptops.html" class="active">اللابتوبات</a></li>
+                <li><a href="#specs">المواصفات</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><a href="#contact">التواصل</a></li>
+            </ul></nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1 translate="no">Dell Latitude 5411</h1>
+                <p class="hero-subtitle">لابتوب احترافي للعمل - معالج Intel Core i5 الجيل العاشر وشاشة.touches 14 بوصة</p>
+                <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude 5411" class="hero-image" width="600" height="400" fetchpriority="high">
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">مميزات اللابتوب</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#9889;</div>
+                        <h3>معالج قوي</h3>
+                        <p>Intel Core i5-10400H للاداء العالي في جميع المهام</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <h3>شاشة.touches</h3>
+                        <p>14 بوصة Full HD IPS مع دعم اللمس</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128190;</div>
+                        <h3>تخزين سريع</h3>
+                        <p>SSD NVMe 512GB للسرعة الفائقه في التشغيل والاقلاع</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <h3>ذاكرة واسعة</h3>
+                        <p>16GB DDR4 3600MHz للمهام المتعددة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="specs" id="specs">
+            <div class="container">
+                <h2 class="section-title">المواصفات الفنية</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h4>المعالج</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel Core i5-10400H</span></div>
+                        <div class="spec-item"><span class="spec-label">عدد الأنوية</span><span class="spec-value">4 نواة / 8 خيط</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد الأساسي</span><span class="spec-value">2.60 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الحد الأقصى للتسريع</span><span class="spec-value">4.60 GHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الكاش</span><span class="spec-value">8 MB</span></div>
+                        <div class="spec-item"><span class="spec-label">الجيل</span><span class="spec-value">الجيل العاشر (Comet Lake)</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>كرت الشاشة</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">Intel UHD Graphics 630</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">مدمج (Integrated)</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الشاشة</h4>
+                        <div class="spec-item"><span class="spec-label">الحجم</span><span class="spec-value">14 بوصة</span></div>
+                        <div class="spec-item"><span class="spec-label">الدقة</span><span class="spec-value">1920 x 1080 Full HD</span></div>
+                        <div class="spec-item"><span class="spec-label">النوع</span><span class="spec-value">IPS</span></div>
+                        <div class="spec-item"><span class="spec-label">اللمس</span><span class="spec-value">نعم (Touch)</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الذاكرة العشوائية</h4>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">16 GB DDR4</span></div>
+                        <div class="spec-item"><span class="spec-label">التردد</span><span class="spec-value">3600 MHz</span></div>
+                        <div class="spec-item"><span class="spec-label">الشكل</span><span class="spec-value">SODIMM</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>التخزين</h4>
+                        <div class="spec-item"><span class="spec-label">الطراز</span><span class="spec-value">SSD NVMe M.2</span></div>
+                        <div class="spec-item"><span class="spec-label">السعة</span><span class="spec-value">512 GB</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>البطارية</h4>
+                        <div class="spec-item"><span class="spec-label">الحالة</span><span class="spec-value">جيدة</span></div>
+                        <div class="spec-item"><span class="spec-label">مدة العمل</span><span class="spec-value">ساعتان</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>الاتصالات</h4>
+                        <div class="spec-item"><span class="spec-label">USB-A</span><span class="spec-value">3× USB 3.2 Gen 1</span></div>
+                        <div class="spec-item"><span class="spec-label">USB-C</span><span class="spec-value">1× Thunderbolt 3</span></div>
+                        <div class="spec-item"><span class="spec-label">HDMI</span><span class="spec-value">2.0</span></div>
+                        <div class="spec-item"><span class="spec-label">Ethernet</span><span class="spec-value">RJ-45 Gigabit</span></div>
+                        <div class="spec-item"><span class="spec-label">WiFi</span><span class="spec-value">Wi-Fi 6 (AX201)</span></div>
+                        <div class="spec-item"><span class="spec-label">Bluetooth</span><span class="spec-value">5.1</span></div>
+                    </div>
+                    <div class="spec-card">
+                        <h4>مميزات اضافية</h4>
+                        <div class="spec-item"><span class="spec-label">قارئ بصمة</span><span class="spec-value">نعم</span></div>
+                        <div class="spec-item"><span class="spec-label">كاميرا</span><span class="spec-value">HD 720p</span></div>
+                        <div class="spec-item"><span class="spec-label">لوحة المفاتيح</span><span class="spec-value">مضيئة (Backlit)</span></div>
+                        <div class="spec-item"><span class="spec-label">ميكروفون</span><span class="spec-value">مزدوج</span></div>
+                        <div class="spec-item"><span class="spec-label">الوزن</span><span class="spec-value">1.54 كجم</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <h2 class="section-title">معرض الصور</h2>
+                <div class="gallery-grid">
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude 5411" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Latitude 5411" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الزاويه</div></button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة الجانب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Latitude 5411" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/Dell_Official/04-Product-Keyboard.jpg" alt="Dell Latitude 5411" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/Dell_Official/05-Product-Back-View.jpg" alt="Dell Latitude 5411" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title">فيديو مراجعة اللابتوب</h2>
+                <div class="video-wrapper">
+                    <iframe width="100%" height="450" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Dell Latitude 5411 Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="company-info" id="contact">
+            <div class="container">
+                <h2 class="section-title section-title--light">بيانات التواصل</h2>
+                <div class="company-grid">
+                    <div class="company-card">
+                        <h4><span aria-hidden="true">&#128205;</span> العنوان</h4>
+                        <p>اسيوط / ديروط / ابو جبل</p>
+                        <p>امام مستشفي الامين - الراعي</p>
+                    </div>
+                    <div class="company-card">
+                        <h4><span aria-hidden="true">&#128222;</span> ارقام الاتصال</h4>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">مينا</div>
+                                <div class="contact-number" dir="ltr">01208063327</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon" aria-hidden="true">&#128100;</div>
+                            <div class="contact-details">
+                                <div class="contact-name">ابراهيم</div>
+                                <div class="contact-number" dir="ltr">01068857705</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company-card">
+                        <h4><span aria-hidden="true">&#127760;</span> تابعنا</h4>
+                        <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك"><span aria-hidden="true">&#102;</span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك"><span aria-hidden="true">&#128295;</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">الرئيسية</a>
+                <a href="../laptops.html">اللابتوبات</a>
+                <a href="#contact">التواصل</a>
+            </div>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
+            </div>
+            <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+        </div>
+    </footer>
+
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
+
+    <div class="lightbox" id="lightbox">
+        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق"><span aria-hidden="true">&times;</span></button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق"><span aria-hidden="true">&#8249;</span></button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي"><span aria-hidden="true">&#8250;</span></button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <script>
+        var galleryImages = [
+            {src: "Pict/Dell_Official/01-Product-Front-View.jpg", caption: "Dell Latitude 5411 - الوجه الامامي"},
+            {src: "Pict/Dell_Official/02-Product-Angle-View.jpg", caption: "Dell Latitude 5411 - الزاويه"},
+            {src: "Pict/Dell_Official/03-Product-Side-View.jpg", caption: "Dell Latitude 5411 - الجانب"},
+            {src: "Pict/Dell_Official/04-Product-Keyboard.jpg", caption: "Dell Latitude 5411 - لوحة المفاتيح"},
+            {src: "Pict/Dell_Official/05-Product-Back-View.jpg", caption: "Dell Latitude 5411 - الظهر"}
+        ];
+        var currentIndex = 0;
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightbox();
+            document.getElementById("lightbox").classList.add("active");
+            document.body.style.overflow = "hidden";
+            document.getElementById("lightbox-close").focus();
+        }
+        function closeLightbox() {
+            document.getElementById("lightbox").classList.remove("active");
+            document.body.style.overflow = "";
+        }
+        function navigateLightbox(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+            if (currentIndex >= galleryImages.length) currentIndex = 0;
+            updateLightbox();
+        }
+        function updateLightbox() {
+            var img = document.getElementById("lightbox-img");
+            var caption = document.getElementById("lightbox-caption");
+            var counter = document.getElementById("lightbox-counter");
+            img.style.opacity = 0;
+            setTimeout(function() {
+                img.src = galleryImages[currentIndex].src;
+                caption.textContent = galleryImages[currentIndex].caption;
+                counter.textContent = (currentIndex + 1) + " / " + galleryImages.length;
+                img.style.opacity = 1;
+            }, 150);
+        }
+        document.addEventListener("keydown", function(e) {
+            if (!document.getElementById("lightbox").classList.contains("active")) return;
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowRight") navigateLightbox(-1);
+            if (e.key === "ArrowLeft") navigateLightbox(1);
+            if (e.key === "Tab") {
+                var focusable = document.querySelectorAll(".lightbox button");
+                var first = focusable[0];
+                var last = focusable[focusable.length - 1];
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
+        document.getElementById("lightbox").addEventListener("click", function(e) {
+            if (e.target === this) closeLightbox();
+        });
+    </script>
+</body>
+</html>
