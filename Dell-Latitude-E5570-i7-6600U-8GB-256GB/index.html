@@ -118,7 +118,7 @@
     <header>
         <div class="container header-content">
             <div class="logo">Dell Latitude</div>
-            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة">&#9776;</button>
+            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة"><span aria-hidden="true">&#9776;</span></button>
             <nav aria-label="القائمة الرئيسية"><ul>
                 <li><a href="../index.html">الرئيسية</a></li>
                 <li><a href="../laptops.html" class="active">اللابتوبات</a></li>
@@ -134,7 +134,7 @@
             <div class="container">
                 <h1 translate="no">Dell Latitude E5570</h1>
                 <p class="hero-subtitle">لابتوب احترافي للعمل - معالج Intel Core i7 وكرت شاشة AMD Radeon (متاح منه 3 قطع)</p>
-                <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="hero-image" width="500" height="350" fetchpriority="high">
+                <img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570" class="hero-image" width="600" height="400" fetchpriority="high">
             </div>
         </section>
 
@@ -207,23 +207,23 @@
             <div class="container">
                 <h2 class="section-title">معرض الصور</h2>
                 <div class="gallery-grid">
-                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/1-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
-                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه"><img src="Pict/2-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الزاويه</div></button>
-                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/3-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
-                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/4-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
-                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/5-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
-                    <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض الصورة الرسمية - الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الوجه الامامي</div></button>
-                    <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض الصورة الرسمية - الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الزاويه</div></button>
-                    <button class="gallery-item" onclick="openLightbox(7)" aria-label="عرض الصورة الرسمية - من الجنب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - من الجنب</div></button>
-                    <button class="gallery-item" onclick="openLightbox(8)" aria-label="عرض الصورة الرسمية - الظهر"><img src="Pict/Dell_Official/04-Product-Back-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - الظهر</div></button>
-                    <button class="gallery-item" onclick="openLightbox(9)" aria-label="عرض الصورة الرسمية - لوحة المفاتيح"><img src="Pict/Dell_Official/05-Product-Keyboard.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon">+</div><div class="gallery-caption">الرسمي - لوحة المفاتيح</div></button>
+                    <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض صورة الوجه الامامي"><img src="Pict/1-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الوجه الامامي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض صورة الزاويه"><img src="Pict/2-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الزاويه</div></button>
+                    <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض صورة لوحة المفاتيح"><img src="Pict/3-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - لوحة المفاتيح</div></button>
+                    <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض صورة الجانب"><img src="Pict/4-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الجانب</div></button>
+                    <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض صورة الظهر"><img src="Pict/5-Dell-Latitude-E5570.jpg" alt="Dell Latitude E5570" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">اللابتوب - الظهر</div></button>
+                    <button class="gallery-item" onclick="openLightbox(5)" aria-label="عرض الصورة الرسمية - الوجه الامامي"><img src="Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">الرسمي - الوجه الامامي</div></button>
+                    <button class="gallery-item" onclick="openLightbox(6)" aria-label="عرض الصورة الرسمية - الزاويه"><img src="Pict/Dell_Official/02-Product-Angle-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">الرسمي - الزاويه</div></button>
+                    <button class="gallery-item" onclick="openLightbox(7)" aria-label="عرض الصورة الرسمية - من الجنب"><img src="Pict/Dell_Official/03-Product-Side-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">الرسمي - من الجنب</div></button>
+                    <button class="gallery-item" onclick="openLightbox(8)" aria-label="عرض الصورة الرسمية - الظهر"><img src="Pict/Dell_Official/04-Product-Back-View.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">الرسمي - الظهر</div></button>
+                    <button class="gallery-item" onclick="openLightbox(9)" aria-label="عرض الصورة الرسمية - لوحة المفاتيح"><img src="Pict/Dell_Official/05-Product-Keyboard.jpg" alt="Dell Latitude E5570 - Official" width="400" height="300" loading="lazy"><div class="zoom-icon" aria-hidden="true">+</div><div class="gallery-caption">الرسمي - لوحة المفاتيح</div></button>
                 </div>
             </div>
         </section>
 
         <section class="video-section">
             <div class="container">
-                <h2 class="section-title">&#127909; فيديو مراجعة اللابتوب</h2>
+                <h2 class="section-title"><span aria-hidden="true">&#127909;</span> فيديو مراجعة اللابتوب</h2>
                 <div class="video-wrapper">
                     <iframe width="100%" height="450" src="https://www.youtube.com/embed/O2f0wh50TU0" title="Dell Latitude E5570 Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -235,21 +235,21 @@
                 <h2 class="section-title section-title--light">بيانات التواصل</h2>
                 <div class="company-grid">
                     <div class="company-card">
-                        <h4>&#128205; العنوان</h4>
+                        <h4><span aria-hidden="true">&#128205;</span> العنوان</h4>
                         <p>اسيوط / ديروط / ابو جبل</p>
                         <p>امام مستشفي الامين - الراعي</p>
                     </div>
                     <div class="company-card">
-                        <h4>&#128222; ارقام الاتصال</h4>
+                        <h4><span aria-hidden="true">&#128222;</span> ارقام الاتصال</h4>
                         <div class="contact-item">
-                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-icon" aria-hidden="true">&#128100;</div>
                             <div class="contact-details">
                                 <div class="contact-name">مينا</div>
                                 <div class="contact-number" dir="ltr">01208063327</div>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">&#128100;</div>
+                            <div class="contact-icon" aria-hidden="true">&#128100;</div>
                             <div class="contact-details">
                                 <div class="contact-name">ابراهيم</div>
                                 <div class="contact-number" dir="ltr">01068857705</div>
@@ -257,11 +257,11 @@
                         </div>
                     </div>
                     <div class="company-card">
-                        <h4>&#127760; تابعنا</h4>
+                        <h4><span aria-hidden="true">&#127760;</span> تابعنا</h4>
                         <p>تابعنا على صفحاتنا الرسمية للحصول على احدث العروض</p>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
-                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" title="صفحة الشركه" aria-label="صفحة الشركه على فيسبوك"><span aria-hidden="true">&#102;</span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" title="صفحة الصيانه" aria-label="صفحة الصيانه على فيسبوك"><span aria-hidden="true">&#128295;</span></a>
                         </div>
                     </div>
                 </div>
@@ -287,9 +287,9 @@
     <script async src="https://finicounter.eu.org/finicounter.js"></script>
 
     <div class="lightbox" id="lightbox">
-        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق">&times;</button>
-        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق">&#8249;</button>
-        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي">&#8250;</button>
+        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق"><span aria-hidden="true">&times;</span></button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق"><span aria-hidden="true">&#8249;</span></button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي"><span aria-hidden="true">&#8250;</span></button>
         <img class="lightbox-img" id="lightbox-img" src="" alt="">
         <div class="lightbox-caption" id="lightbox-caption"></div>
         <div class="lightbox-counter" id="lightbox-counter"></div>
