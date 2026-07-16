@@ -182,7 +182,7 @@
     <header>
         <div class="container header-content">
             <div class="logo">HP ProBook 650</div>
-            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة">&#9776;</button>
+            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة"><span aria-hidden="true">&#9776;</span></button>
             <nav aria-label="القائمة الرئيسية"><ul>
                 <li><a href="../index.html">الرئيسية</a></li>
                 <li><a href="../laptops.html" class="active">اللابتوبات</a></li>
@@ -239,7 +239,7 @@
                 <div class="specs-grid">
                     <!-- CPU Spec Card -->
                     <div class="spec-card">
-                        <h4>&#128187; المعالج</h4>
+                        <h4><span aria-hidden="true">&#128187;</span> المعالج</h4>
                         <div class="spec-item">
                             <span class="spec-label">الموديل</span>
                             <span class="spec-value">Intel Core i7-7600U</span>
@@ -255,7 +255,7 @@
                     </div>
                     <!-- GPU Spec Card - Integrated -->
                     <div class="spec-card">
-                        <h4>&#127918; كرت الشاشه المدمج</h4>
+                        <h4><span aria-hidden="true">&#127918;</span> كرت الشاشه المدمج</h4>
                         <div class="spec-item">
                             <span class="spec-label">الموديل</span>
                             <span class="spec-value">Intel HD Graphics 620</span>
@@ -267,7 +267,7 @@
                     </div>
                     <!-- GPU Spec Card - Dedicated -->
                     <div class="spec-card">
-                        <h4>&#127918; كرت الشاشه المنفصل</h4>
+                        <h4><span aria-hidden="true">&#127918;</span> كرت الشاشه المنفصل</h4>
                         <div class="spec-item">
                             <span class="spec-label">الموديل</span>
                             <span class="spec-value">AMD Radeon R7 M350</span>
@@ -283,7 +283,7 @@
                     </div>
                     <!-- Storage -->
                     <div class="spec-card">
-                        <h4>&#128190; التخزين</h4>
+                        <h4><span aria-hidden="true">&#128190;</span> التخزين</h4>
                         <div class="spec-item">
                             <span class="spec-label">السعة</span>
                             <span class="spec-value">256GB</span>
@@ -295,7 +295,7 @@
                     </div>
                     <!-- RAM -->
                     <div class="spec-card">
-                        <h4>&#9889; الذاكره</h4>
+                        <h4><span aria-hidden="true">&#9889;</span> الذاكره</h4>
                         <div class="spec-item">
                             <span class="spec-label">السعة</span>
                             <span class="spec-value">8GB DDR4</span>
@@ -307,7 +307,7 @@
                     </div>
                     <!-- Battery -->
                     <div class="spec-card">
-                        <h4>&#128267; البطاريه</h4>
+                        <h4><span aria-hidden="true">&#128267;</span> البطاريه</h4>
                         <div class="spec-item">
                             <span class="spec-label">السعة</span>
                             <span class="spec-value">37620mwh</span>
@@ -315,7 +315,7 @@
                     </div>
                     <!-- Display -->
                     <div class="spec-card">
-                        <h4>&#128424; الشاشه</h4>
+                        <h4><span aria-hidden="true">&#128424;</span> الشاشه</h4>
                         <div class="spec-item">
                             <span class="spec-label">الحجم</span>
                             <span class="spec-value">15.6 انش</span>
@@ -335,27 +335,27 @@
                 <h2 class="section-title">معرض الصور</h2>
                 <div class="gallery-grid">
                     <button class="gallery-item" onclick="openLightbox(0)" aria-label="عرض الصورة 1">
-                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP ProBook 650 G3 - من الامام" loading="lazy">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP ProBook 650 G3 - من الامام" loading="lazy" width="400" height="300">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">المنظر الأمامي</div>
                     </button>
                     <button class="gallery-item" onclick="openLightbox(1)" aria-label="عرض الصورة 2">
-                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/02-Product-Angle-View.jpg" alt="HP ProBook 650 G3 - من الزاوية" loading="lazy">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/02-Product-Angle-View.jpg" alt="HP ProBook 650 G3 - من الزاوية" loading="lazy" width="400" height="300">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">من الزاوية</div>
                     </button>
                     <button class="gallery-item" onclick="openLightbox(2)" aria-label="عرض الصورة 3">
-                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/03-Product-Back-View.jpg" alt="HP ProBook 650 G3 - من الخلف" loading="lazy">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/03-Product-Back-View.jpg" alt="HP ProBook 650 G3 - من الخلف" loading="lazy" width="400" height="300">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">المنظر الخلفي</div>
                     </button>
                     <button class="gallery-item" onclick="openLightbox(3)" aria-label="عرض الصورة 4">
-                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/04-Keyboard-View.jpg" alt="HP ProBook 650 G3 - لوحة المفاتيح" loading="lazy">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/04-Keyboard-View.jpg" alt="HP ProBook 650 G3 - لوحة المفاتيح" loading="lazy" width="400" height="300">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">لوحة المفاتيح</div>
                     </button>
                     <button class="gallery-item" onclick="openLightbox(4)" aria-label="عرض الصورة 5">
-                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/05-Side-View.jpg" alt="HP ProBook 650 G3 - من الجانب" loading="lazy">
+                        <img src="../HP-ProBook-650-G3-i7-7820HQ-8GB-256GB-HD630/Pict/HP_Official/05-Side-View.jpg" alt="HP ProBook 650 G3 - من الجانب" loading="lazy" width="400" height="300">
                         <div class="zoom-icon" aria-hidden="true">&#128269;</div>
                         <div class="gallery-caption">من الجانب</div>
                     </button>
@@ -380,19 +380,19 @@
                 <h2 class="section-title section-title--light">الراعي - بيانات التواصل</h2>
                 <div class="company-grid">
                     <div class="company-card">
-                        <h4>&#128205; العنوان</h4>
+                        <h4><span aria-hidden="true">&#128205;</span> العنوان</h4>
                         <p>اسيوط / ديروط / ابو جبل / امام مستشفي الامين</p>
                     </div>
                     <div class="company-card">
-                        <h4>&#128222; التليفون</h4>
+                        <h4><span aria-hidden="true">&#128222;</span> التليفون</h4>
                         <p>مينا: 01208063327</p>
                         <p>ابراهيم: 01068857705</p>
                     </div>
                     <div class="company-card">
-                        <h4>&#127760; تابعنا</h4>
+                        <h4><span aria-hidden="true">&#127760;</span> تابعنا</h4>
                         <div class="social-links">
-                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" aria-label="صفحة الشركه على فيسبوك">&#102;</a>
-                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" aria-label="صفحة الصيانه على فيسبوك">&#128295;</a>
+                            <a href="https://www.facebook.com/Elra3yAsyut/" target="_blank" class="social-link" aria-label="صفحة الشركه على فيسبوك"><span aria-hidden="true">&#102;</span></a>
+                            <a href="https://www.facebook.com/profile.php?id=61585982617699" target="_blank" class="social-link" aria-label="صفحة الصيانه على فيسبوك"><span aria-hidden="true">&#128295;</span></a>
                         </div>
                     </div>
                 </div>
@@ -417,11 +417,11 @@
 
     <!-- Lightbox Modal -->
     <div class="lightbox" id="lightbox">
-        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق">&times;</button>
-        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق">&#10095;</button>
+        <button id="lightbox-close" class="lightbox-close" onclick="closeLightbox()" aria-label="اغلاق"><span aria-hidden="true">&times;</span></button>
+        <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" aria-label="السابق"><span aria-hidden="true">&#10095;</span></button>
         <img src="" alt="Gallery Image" class="lightbox-img" id="lightbox-img">
         <p class="lightbox-caption" id="lightbox-caption"></p>
-        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي">&#10094;</button>
+        <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" aria-label="التالي"><span aria-hidden="true">&#10094;</span></button>
         <div class="lightbox-counter" id="lightbox-counter"></div>
     </div>
 
