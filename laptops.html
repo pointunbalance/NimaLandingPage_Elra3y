@@ -65,6 +65,10 @@
         .placeholder-img{width:100%;height:clamp(200px,40vw,280px);background:var(--bg-placeholder);display:flex;align-items:center;justify-content:center;font-size:clamp(2.5rem,6vw,4rem)}
         .product-badge-disabled{background:var(--disabled)}
         .product-btn-disabled{background:var(--disabled);cursor:not-allowed}
+        .product-card--featured{border:2px solid #FFD700;box-shadow:0 10px 40px rgba(255,215,0,.3);position:relative}
+        .product-card--featured:hover{box-shadow:0 20px 60px rgba(255,215,0,.4);border-color:#FFD700}
+        .product-card--featured::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#FFD700,#FFA500,#FFD700);border-radius:20px 20px 0 0}
+        .product-badge--featured{background:linear-gradient(135deg,#FFD700,#FFA500);color:#333}
         .footer-links{display:flex;justify-content:center;gap:clamp(12px,2.5vw,20px);margin-bottom:15px;flex-wrap:wrap}
         .footer-links a{color:var(--primary);text-decoration:none;font-size:clamp(.75rem,1.8vw,.9rem);white-space:nowrap}
 
@@ -173,10 +177,10 @@
                             <span class="product-btn">شوف التفاصيل &#8592;</span>
                         </div>
                     </a>
-                    <a href="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/index.html" class="product-card">
+                    <a href="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/index.html" class="product-card product-card--featured">
                         <img src="Dell-Precision-7520-i7-6820HQ-16GB-256GB-Quadro-M1200/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell Precision 7520" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
                         <div class="product-info">
-                            <span class="product-badge">&#11088; متاح</span>
+                            <span class="product-badge product-badge--featured">&#11088; الافضل</span>
                             <h3 class="product-name">Dell Precision 7520</h3>
                             <p class="product-desc">محطة عمل احترافية للتصميم والتعديل - معالج Intel Core i7 وكرت شاشة NVIDIA Quadro</p>
                             <div class="product-specs">
