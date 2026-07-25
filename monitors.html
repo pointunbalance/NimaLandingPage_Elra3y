@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" style="-webkit-tap-highlight-color:transparent">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>الشاشات - الراعي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap" as="style">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700;800;900&family=Noto+Kufi+Arabic:wght@400;500;600;700;800&display=swap");
+        *{margin:0;padding:0;box-sizing:border-box}
+        html,body{overflow-x:clip}
+        :root{--primary:#0096D6;--primary-dark:#0073A7;--secondary:#333;--accent:#FF6B35;--bg-light:#f8f9fa;--bg-dark:#1a1a2e;--text-light:#fff;--text-dark:#333;--text-muted:#666;--bg-placeholder:#e0e0e0;--disabled:#999;--facebook:#4267B2;--border:#eee;--grad:linear-gradient(135deg,#0096D6 0%,#00C6FF 100%);--grad-dark:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%);--z-overlay:1000;--radius:12px;--radius-lg:20px;--font-display:"Cairo",sans-serif;--font-body:"Noto Kufi Arabic",sans-serif}
+        body{font-family:var(--font-body);line-height:1.8;color:var(--text-dark);background:var(--bg-light);overscroll-behavior:contain;padding-bottom:env(safe-area-inset-bottom)}
+        h1,h2,h3{font-family:var(--font-display);text-wrap:balance}
+        section[id]{scroll-margin-top:80px}
+        header{padding:20px 0;position:sticky;top:0;z-index:var(--z-overlay)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .header-content{display:flex;justify-content:space-between;align-items:center;flex-wrap:nowrap;gap:12px}
+        .logo{font-family:var(--font-display);font-size:clamp(1.3rem,4vw,1.8rem);font-weight:900;color:var(--primary);background:var(--bg-dark);padding:10px 20px;border-radius:var(--radius)}
+        .logo span{color:var(--text-light)}
+        nav{background:var(--bg-dark);border-radius:16px;padding:8px 12px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+        .nav-toggle{display:none;background:none;border:none;color:white;font-size:1.5rem;cursor:pointer;padding:6px;touch-action:manipulation}
+        nav ul{display:flex;list-style:none;gap:20px;align-items:center}
+        nav a{color:var(--text-light);text-decoration:none;font-weight:500;padding:8px 16px;border-radius:50px;transition:background .3s,color .3s;touch-action:manipulation;white-space:nowrap}
+        nav a:hover{background:rgba(255,255,255,.1);color:var(--primary)}
+        nav a.active{background:var(--primary);color:var(--text-light)}
+        nav a:focus-visible,.product-card:focus-visible,.product-btn:focus-visible{outline:2px solid var(--primary);outline-offset:2px}
+        .product-card:active{transform:translateY(0);transition-duration:.1s}
+        .product-btn:disabled{opacity:.5;cursor:not-allowed;transform:none}
+        .hero h1,.section-title{overflow-wrap:anywhere;min-width:0}
+        @media(prefers-reduced-motion:reduce){*{transition:none!important;transform:none!important;animation:none!important}}
+        .hero{background:var(--grad-dark);color:var(--text-light);padding:clamp(40px,8vw,60px) 0;text-align:center}
+        .hero h1{font-size:clamp(1.5rem,4vw,2.5rem);margin-bottom:10px}
+        .hero p{font-size:clamp(.9rem,2vw,1.1rem);opacity:.8;padding:0 15px}
+        .products{padding:clamp(40px,8vw,60px) 0}
+        .section-title{text-align:center;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--secondary);margin-bottom:10px}
+        .section-title--light{color:var(--text-light)}
+        .section-subtitle{text-align:center;color:var(--text-muted);margin-bottom:clamp(25px,5vw,40px);font-size:clamp(.85rem,2vw,1rem);padding:0 15px}
+        .products-grid{display:grid;grid-template-columns:1fr;gap:20px}
+        .product-card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.08);transition:box-shadow .3s,border-color .3s;border:2px solid transparent;cursor:pointer;text-decoration:none;color:inherit;display:flex;flex-direction:column}
+        .product-card:hover{box-shadow:0 20px 60px rgba(0,0,0,.12);border-color:var(--primary)}
+        .product-img{width:100%;height:clamp(200px,40vw,280px);object-fit:cover;background:var(--bg-placeholder)}
+        .product-info{padding:clamp(18px,4vw,25px);display:flex;flex-direction:column;flex:1}
+        .product-badge{display:inline-block;background:var(--primary);color:white;padding:clamp(4px,1vw,5px) clamp(10px,2.5vw,15px);border-radius:20px;font-size:clamp(.7rem,1.8vw,.8rem);font-weight:600;margin-bottom:15px;align-self:flex-start}
+        .product-name{font-size:clamp(1.1rem,2.8vw,1.3rem);font-weight:700;color:var(--secondary);margin-bottom:10px}
+        .product-desc{color:var(--text-muted);font-size:clamp(.85rem,2vw,.95rem);margin-bottom:15px;line-height:1.7}
+        .product-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+        .spec-tag{background:var(--bg-light);color:var(--text-muted);padding:clamp(4px,1vw,6px) clamp(8px,2vw,12px);border-radius:8px;font-size:clamp(.7rem,1.8vw,.8rem)}
+        .product-btn{display:inline-block;background:var(--grad);color:white;padding:clamp(10px,2.5vw,12px) clamp(20px,4vw,30px);border-radius:50px;font-weight:600;font-size:clamp(.85rem,2vw,.95rem);text-decoration:none;transition:background .3s,box-shadow .3s,transform .3s;width:100%;text-align:center;margin-top:auto;white-space:nowrap}
+        .product-btn:hover{box-shadow:0 5px 20px rgba(0,150,214,.4)}
+        .features-bar{background:var(--bg-dark);color:var(--text-light);padding:clamp(25px,5vw,40px) 0}
+        .features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,2.5vw,20px);text-align:center}
+        .feature-item{padding:clamp(12px,3vw,20px)}
+        .feature-icon{font-size:clamp(1.5rem,3.5vw,2rem);margin-bottom:10px}
+        .feature-text{font-size:clamp(.75rem,1.8vw,.9rem);opacity:.8}
+        footer{background:var(--grad-dark);color:var(--text-light);padding:clamp(25px,5vw,30px) 0 20px;text-align:center}
+        .footer-counter{display:flex;align-items:center;gap:10px;justify-content:center;margin:20px 0}
+        .footer-counter-label{color:rgba(255,255,255,.6);font-size:clamp(.75rem,1.8vw,.85rem)}
+        .footer-counter-value{background:var(--primary);color:white;padding:clamp(6px,1.5vw,8px) clamp(15px,3.5vw,20px);border-radius:8px;font-weight:700;font-size:clamp(.9rem,2.2vw,1.1rem);min-width:50px;text-align:center}
+        .footer-copyright{opacity:.6;font-size:clamp(.7rem,1.8vw,.85rem);margin-top:10px}
+        .placeholder-card{opacity:.6;pointer-events:none}
+        .placeholder-img{width:100%;height:clamp(200px,40vw,280px);background:var(--bg-placeholder);display:flex;align-items:center;justify-content:center;font-size:clamp(2.5rem,6vw,4rem)}
+        .product-badge-disabled{background:var(--disabled)}
+        .product-btn-disabled{background:var(--disabled);cursor:not-allowed}
+        .footer-links{display:flex;justify-content:center;gap:clamp(12px,2.5vw,20px);margin-bottom:15px;flex-wrap:wrap}
+        .footer-links a{color:var(--primary);text-decoration:none;font-size:clamp(.75rem,1.8vw,.9rem);white-space:nowrap}
+
+        /* Desktop breakpoints */
+        @media(min-width:40rem){
+            .products-grid{grid-template-columns:repeat(2,1fr)}
+            .features-grid{grid-template-columns:repeat(4,1fr)}
+        }
+        @media(min-width:60rem){
+            .products-grid{grid-template-columns:repeat(3,1fr)}
+        }
+
+        /* Mobile menu */
+        @media(max-width:768px){
+            .header-content{flex-direction:column;gap:15px}
+            .nav-toggle{display:block}
+            nav{width:100%;padding:8px 15px}
+            nav ul{display:none;flex-direction:column;gap:10px;padding:10px 0}
+            nav.open ul{display:flex}
+            nav a{display:block;text-align:center;padding:10px 16px}
+            .social-link{min-width:44px;min-height:44px}
+        }
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary);color:white;padding:8px 16px;z-index:1000;text-decoration:none;font-weight:600;transition:top .3s}
+        .skip-link:focus{top:0}
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    <header>
+        <div class="container header-content">
+            <div class="logo">ال<span>راعي</span></div>
+            <button class="nav-toggle" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="فتح القائمة">&#9776;</button>
+            <nav aria-label="القائمة الرئيسية"><ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="laptops.html">اللابتوبات</a></li>
+                <li><a href="monitors.html" class="active">الشاشات</a></li>
+                <li><a href="index.html#contact">التواصل</a></li>
+            </ul></nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="container">
+                <h1><span aria-hidden="true">&#128187;</span> الشاشات</h1>
+                <p>اكتشف تشكيله الشاشات المتاحه عندنا بافضل الاسعار والضمان</p>
+            </div>
+        </section>
+
+        <section class="features-bar">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">&#128274;</div>
+                        <div class="feature-text">ضمان على كل المنتجات</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">&#128176;</div>
+                        <div class="feature-text">افضل الاسعار</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">&#128295;</div>
+                        <div class="feature-text">خدمه ما بعد البيع</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon" aria-hidden="true">&#128187;</div>
+                        <div class="feature-text">تثبيت انظمه تشغيل والبرامج</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2 class="section-title">المنتجات المتاحه</h2>
+                <p class="section-subtitle">اختار الشاشه المناسبه لاحتياجاتك</p>
+                <div class="products-grid">
+                    <a href="Philips-27-271B8QJ/index.html" class="product-card">
+                        <img src="Philips-27-271B8QJ/Pict/Philips_Official/01-Product-Front-View.jpg" alt="Philips 27 271B8QJ" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Philips 27 271B8QJ</h3>
+                            <p class="product-desc">شاشة فيليبس 27 بوصه مع سماعات ومنافذ متعددة (Audio + HD + DP + VGA + DVI + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + HD + DP + VGA + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="HP-27-Z27s-4K/index.html" class="product-card">
+                        <img src="HP-27-Z27s-4K/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP 27 Z27s 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">HP 27 Z27s 4K</h3>
+                            <p class="product-desc">شاشة HP 27 بوصه 4K مع منافذ متعددة (2HD + DP + mDP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">2HD + DP + mDP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Dell-27-P2717H/index.html" class="product-card">
+                        <img src="Dell-27-P2717H/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell 27 P2717H" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Dell 27 P2717H</h3>
+                            <p class="product-desc">شاشة ديل 27 بوصه مع منافذ (HD + DP + VGA + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">HD + DP + VGA</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Dell-27-P2714H/index.html" class="product-card">
+                        <img src="Dell-27-P2714H/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell 27 P2714H" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Dell 27 P2714H</h3>
+                            <p class="product-desc">شاشة ديل 27 بوصه مع منافذ (VGA + DVI + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + DVI + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Dell-27-U2713H-2K/index.html" class="product-card">
+                        <img src="Dell-27-U2713H-2K/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell 27 U2713H 2K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Dell 27 U2713H 2K</h3>
+                            <p class="product-desc">شاشة ديل 27 بوصه دقة 2K مع منافذ (HD + DP + mDP + DVI)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">2K</span>
+                                <span class="spec-tag">HD + DP + mDP + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Eizo-27-EV2736W/index.html" class="product-card">
+                        <img src="Eizo-27-EV2736W/Pict/Eizo_Official/01-Product-Front-View.jpg" alt="Eizo 27 EV2736W" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Eizo 27 EV2736W</h3>
+                            <p class="product-desc">شاشة ايزو 27 بوصه احترافية مع سماعات ومنافذ (Audio + DP + DVI + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + DP + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-LU28E85KRS-4K/index.html" class="product-card">
+                        <img src="Samsung-27-LU28E85KRS-4K/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 LU28E85KRS 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Samsung 27 LU28E85KRS 4K</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه 4K مع منافذ (2HD + DP + mDP)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">2HD + DP + mDP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-S27E450/index.html" class="product-card">
+                        <img src="Samsung-27-S27E450/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 S27E450" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Samsung 27 S27E450</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه مع منافذ (VGA + DVI + DP)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">VGA + DVI + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-S27E650/index.html" class="product-card">
+                        <img src="Samsung-27-S27E650/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 S27E650" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">Samsung 27 S27E650</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه مع سماعات ومنافذ متعددة (Audio + VGA + DP + DVI + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + VGA + DP + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="HP-27-Z27i/index.html" class="product-card">
+                        <img src="HP-27-Z27i/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP 27 Z27i" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">HP 27 Z27i</h3>
+                            <p class="product-desc">شاشة HP 27 بوصه مع منافذ متعددة (VGA + DVI + DP + HD + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + DVI + DP + HD</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Philips-27-273EL/index.html" class="product-card">
+                        <img src="Philips-27-273EL/Pict/Philips_Official/01-Product-Front-View.jpg" alt="Philips 27 273EL" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Philips 27 273EL</h3>
+                            <p class="product-desc">شاشة فيليبس 27 بوصه مع منافذ (VGA + DVI)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">VGA + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="AOC-27-Q2775PQU/index.html" class="product-card">
+                        <img src="AOC-27-Q2775PQU/Pict/AOC_Official/01-Product-Front-View.jpg" alt="AOC 27 Q2775PQU" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">AOC 27 Q2775PQU</h3>
+                            <p class="product-desc">شاشة AOC 27 بوصه مع سماعات ومنافذ متعددة (Audio + HD + DP + VGA + DVI + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + HD + DP + VGA + DVI</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-S27C650/index.html" class="product-card">
+                        <img src="Samsung-27-S27C650/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 S27C650" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Samsung 27 S27C650</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه مع منافذ (VGA + DVI + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + DVI + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Dell-27-P2715Q-4K/index.html" class="product-card">
+                        <img src="Dell-27-P2715Q-4K/Pict/Dell_Official/01-Product-Front-View.jpg" alt="Dell 27 P2715Q 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Dell 27 P2715Q 4K</h3>
+                            <p class="product-desc">شاشة ديل 27 بوصه 4K مع منافذ (HD + 2DP + mDP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">HD + 2DP + mDP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="ViewSonic-27-VS15810/index.html" class="product-card">
+                        <img src="ViewSonic-27-VS15810/Pict/ViewSonic_Official/01-Product-Front-View.jpg" alt="ViewSonic 27 VS15810" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">ViewSonic 27 VS15810</h3>
+                            <p class="product-desc">شاشة فيو سونيك 27 بوصه مع سماعات ومنافذ (Audio + HD + VGA + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + HD + VGA</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-SA650-Adapter/index.html" class="product-card">
+                        <img src="Samsung-27-SA650-Adapter/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 SA650 Adapter" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (4 قطع)</span>
+                            <h3 class="product-name">Samsung 27 SA650 Adapter</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه محول مع منافذ (VGA + DVI + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + DVI + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-28-LU28E570DS-4K/index.html" class="product-card">
+                        <img src="Samsung-28-LU28E570DS-4K/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 28 LU28E570DS 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (3 قطع)</span>
+                            <h3 class="product-name">Samsung 28 LU28E570DS 4K</h3>
+                            <p class="product-desc">شاشة سامسونج 28 بوصه 4K مع منافذ (2HD + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">28 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">2HD + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-28-LU28E590DS-4K/index.html" class="product-card">
+                        <img src="Samsung-28-LU28E590DS-4K/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 28 LU28E590DS 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">Samsung 28 LU28E590DS 4K</h3>
+                            <p class="product-desc">شاشة سامسونج 28 بوصه 4K مع منافذ (2HD + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">28 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">2HD + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-LS27F350FHUXEN/index.html" class="product-card">
+                        <img src="Samsung-27-LS27F350FHUXEN/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 LS27F350FHUXEN" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">Samsung 27 LS27F350FHUXEN</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه محول مع منافذ (VGA + HD + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + HD</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="LG-27-1907FPVT-4K/index.html" class="product-card">
+                        <img src="LG-27-1907FPVT-4K/Pict/LG_Official/01-Product-Front-View.jpg" alt="LG 27 1907FPVT 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">LG 27 1907FPVT 4K</h3>
+                            <p class="product-desc">شاشة LG 27 بوصه 4K مع منافذ (2HD + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">2HD + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-28-LU28H750UQUXEN-4K/index.html" class="product-card">
+                        <img src="Samsung-28-LU28H750UQUXEN-4K/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 28 LU28H750UQUXEN 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Samsung 28 LU28H750UQUXEN 4K</h3>
+                            <p class="product-desc">شاشة سامسونج 28 بوصه 4K مع منافذ (2HD + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">28 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">2HD + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="Samsung-27-SA550-Adapter/index.html" class="product-card">
+                        <img src="Samsung-27-SA550-Adapter/Pict/Samsung_Official/01-Product-Front-View.jpg" alt="Samsung 27 SA550 Adapter" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح</span>
+                            <h3 class="product-name">Samsung 27 SA550 Adapter</h3>
+                            <p class="product-desc">شاشة سامسونج 27 بوصه محول مع منافذ (VGA + HD + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">VGA + HD</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="HP-27-E272q/index.html" class="product-card">
+                        <img src="HP-27-E272q/Pict/HP_Official/01-Product-Front-View.jpg" alt="HP 27 E272q" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">HP 27 E272q</h3>
+                            <p class="product-desc">شاشة HP 27 بوصه مع منافذ (HD + DP + VGA + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">HD + DP + VGA</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <a href="ASUS-27-PB287-4K/index.html" class="product-card">
+                        <img src="ASUS-27-PB287-4K/Pict/ASUS_Official/01-Product-Front-View.jpg" alt="ASUS 27 PB287 4K" class="product-img" width="400" height="280" loading="eager" fetchpriority="high">
+                        <div class="product-info">
+                            <span class="product-badge">&#11088; متاح (قطعتين)</span>
+                            <h3 class="product-name">ASUS 27 PB287 4K</h3>
+                            <p class="product-desc">شاشة ASUS 27 بوصه 4K مع سماعات ومنافذ متعددة (Audio + 2HD + DP + IPS)</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">27 بوصه</span>
+                                <span class="spec-tag">4K</span>
+                                <span class="spec-tag">IPS</span>
+                                <span class="spec-tag">Audio + 2HD + DP</span>
+                            </div>
+                            <span class="product-btn">شوف التفاصيل &#8592;</span>
+                        </div>
+                    </a>
+                    <div class="product-card placeholder-card">
+                        <div class="placeholder-img">&#128187;</div>
+                        <div class="product-info">
+                            <span class="product-badge product-badge-disabled">قريباً</span>
+                            <h3 class="product-name">منتجات جديده قريباً</h3>
+                            <p class="product-desc">في انتظاركم منتجات جديده باسعار مميزة - تابعونا</p>
+                            <div class="product-specs">
+                                <span class="spec-tag">قريباً</span>
+                            </div>
+                            <span class="product-btn product-btn-disabled">قريباً</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="laptops.html">اللابتوبات</a>
+                <a href="monitors.html">الشاشات</a>
+                <a href="index.html#contact">التواصل</a>
+            </div>
+            <div class="footer-counter">
+                <span class="footer-counter-label">عدد الزوار:</span>
+                <span id="finicount_views" class="footer-counter-value">...</span>
+            </div>
+            <p class="footer-copyright">&copy; 2026 الراعي لخدمات الكمبيوتر واللابتوب وكاميرات المراقبه</p>
+        </div>
+    </footer>
+
+    <script async src="https://finicounter.eu.org/finicounter.js"></script>
+</body>
+</html>
